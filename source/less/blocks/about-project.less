@@ -1,0 +1,90 @@
+.about-project {
+  margin: 0 20px;
+}
+
+.about-project__list {
+  margin-bottom: 53px;
+}
+
+.about-project__item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  &:not(:last-child) {
+    margin-bottom: 26px;
+  }
+}
+
+.about-project__title {
+  margin: 0;
+  margin-bottom: 42px;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.about-project__item--leaf {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-image: url("../../img/icon_leaf.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.about-project__item--powder {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-image: url("../../img/icon_tub.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.about-project__item--cutlery {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-image: url("../../img/icon_eat.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.about-project__item--clock {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-image: url("../../img/icon_alarm.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.about-project__paragraph {
+  margin: 0;
+  margin-left: 80px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
