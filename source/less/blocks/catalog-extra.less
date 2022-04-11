@@ -1,0 +1,87 @@
+.catalog-extra {
+  padding: 0 20px;
+}
+
+.catalog-extra__paragraph-container {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.catalog-extra-paragraph {
+  margin: 0;
+  font-family: "Arial", "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}
+
+.catalog-extra__title-container {
+  .border-bottom();
+}
+
+.catalog-extra__list {
+  .site-list();
+  margin-bottom: 35px;
+}
+
+.catalog-extra__item {
+  .site-list-item();
+  padding-top: 13px;
+  padding-bottom: 19px;
+  .border-bottom();
+}
+
+.catalog-extra__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+  color: #000000;
+}
+
+.catalog-extra__product-title {
+  margin: 0;
+  margin-bottom: 13px;
+  .font-upper(400, 16px, 16px);
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.catalog-extra__button {
+  margin: 0;
+}
+
+.catalog-extra__gift {
+  margin-bottom: 35px;
+  position: relative;
+  width: 280px;
+  height: 290px;
+  background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/extra-gift.jpg");
+
+  &::before {
+    position: absolute;
+    top: 59px;
+    left: 101px;
+    content: "";
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/icon_gift.svg");
+  }
+}
+
+.catalog-extra__gift-description {
+  padding: 187px 61px 43px 58px;
+  width: 161px;
+  text-align: center;
+  .font-main(400, 16px, 20px);
+  font-family: "Arial", "Oswald", sans-serif;
+  color: #ffffff;
+}

@@ -1,0 +1,21 @@
+.button {
+  margin: 0 20px;
+  display: flex;
+  width: 280px;
+  min-height: 40px;
+  background-color: @main-background-color;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  .font-upper(400, 14px, 18px);
+  color: #ffffff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

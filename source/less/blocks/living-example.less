@@ -1,0 +1,113 @@
+.living-example {
+  padding: 25px 20px;
+  padding-bottom: 44px;
+  background-color: #eaeaea;
+}
+
+.living-example__title {
+  margin: 0;
+  margin-bottom: 40px;
+  .font-main(400, 36px, 40px);
+}
+
+.living-example__description {
+  margin: 0;
+  margin-bottom: 20px;
+  .font-main(400, 14px, 18px);
+  font-family: "Arial", "Oswald", sans-serif;
+  color: #444444;
+}
+
+.living-example__result {
+  margin-bottom: 34px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.living-example__results {
+  position: relative;
+}
+
+.living-example__result-number {
+  display: flex;
+  margin: 0;
+  width: 124px;
+  height: 56px;
+  .font-upper(400, 24px, 24px);
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+}
+
+.living-example__result-description {
+  position: absolute;
+  left: 20%;
+  top: 50px;
+  display: flex;
+  width: 77px;
+  align-items: center;
+  text-align: center;
+  .font-main(400, 12px, 100%);
+  font-family: "Arial", "Oswald", sans-serif;
+  color: #444444;
+  background-color: #eaeaea;
+}
+
+.living-example__expenses {
+  margin-top: 0;
+  margin-bottom: 40px;
+  .font-upper(400, 14px, 20px);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.living-example__image {
+  margin-bottom: 23px;
+}
+
+.living-example__slider {
+  display: flex;
+  margin: 0 44px;
+}
+
+.living-example__slider-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 13px;
+  padding: 4px 6px;
+  width: 86px;
+  height: 6px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.living-example__slider-button {
+  display: flex;
+  width: 35px;
+  height: 6px;
+  align-self: center;
+  border: none;
+  cursor: pointer;
+}
+
+.living-example__slider-button--current {
+  background-color: @main-background-color;
+  border-radius: 6px;
+}
+
+.living-example__slider-button--closed {
+  display: none;
+}
+
+.living-example__slider-text {
+  margin: 0;
+  .font-upper(400, 16px, 20px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
