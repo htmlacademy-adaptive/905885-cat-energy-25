@@ -7,21 +7,14 @@
 .living-example__title {
   margin: 0;
   margin-bottom: 40px;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
+  .font-main(400, 36px, 40px);
 }
 
 .living-example__description {
   margin: 0;
   margin-bottom: 20px;
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  .font-main(400, 14px, 18px);
+  font-family: "Arial", "Oswald", sans-serif;
   color: #444444;
 }
 
@@ -41,12 +34,7 @@
   margin: 0;
   width: 124px;
   height: 56px;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-  text-transform: uppercase;
+  .font-upper(400, 24px, 24px);
   align-items: center;
   justify-content: center;
   border: 1px solid #cdcdcd;
@@ -61,11 +49,8 @@
   width: 77px;
   align-items: center;
   text-align: center;
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 100%;
+  .font-main(400, 12px, 100%);
+  font-family: "Arial", "Oswald", sans-serif;
   color: #444444;
   background-color: #eaeaea;
 }
@@ -73,11 +58,7 @@
 .living-example__expenses {
   margin-top: 0;
   margin-bottom: 40px;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  .font-upper(400, 14px, 20px);
   text-align: center;
   text-transform: uppercase;
 }
@@ -113,7 +94,7 @@
 }
 
 .living-example__slider-button--current {
-  background-color: #68b738;
+  background-color: @main-background-color;
   border-radius: 6px;
 }
 
@@ -123,11 +104,7 @@
 
 .living-example__slider-text {
   margin: 0;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  .font-upper(400, 16px, 20px);
   display: flex;
   align-items: center;
   text-align: center;

@@ -21,11 +21,14 @@
 }
 
 .main-footer__list {
+  .site-list();
   display: flex;
   margin: 0 auto;
 }
 
 .main-footer__item {
+  .site-list-item();
+
   &:not(:last-child) {
     margin-right: 26px;
   }
@@ -33,7 +36,7 @@
 
 .main-footer__link {
   &:hover path {
-    fill: #68b738;
+    fill: @main-background-color;
   }
 
   &:active path {
@@ -44,16 +47,12 @@
 .main-footer__link-academy {
   display: flex;
   justify-content: space-between;
-  text-decoration: none;
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
+  .font-main(400, 16px, 18px);
+  font-family: "Arial", "Oswald", sans-serif;
   color: #444444;
 
   &:hover path {
-    fill: #68b738;
+    fill: @main-background-color;
   }
 
   &:active {

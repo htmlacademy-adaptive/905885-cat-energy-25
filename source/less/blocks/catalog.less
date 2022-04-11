@@ -1,10 +1,6 @@
 .catalog {
   margin-bottom: 25px;
-  border-bottom: @border-bottom;
-}
-
-.catalog__link {
-  text-decoration: none;
+  .border-bottom();
 }
 
 .catalog__link-image {
@@ -19,19 +15,21 @@
   margin-top: 27px;
   padding-bottom: 41px;
   text-align: center;
-  border-bottom: @border-bottom;
+  .border-bottom();
 }
 
 .catalog__list {
+  .site-list();
   margin-bottom: 25px;
 }
 
 .catalog__item {
+  .site-list-item();
   padding: 20px;
   padding-bottom: 25px;
   display: flex;
   flex-direction: column;
-  border-bottom: @border-bottom;
+  .border-bottom();
 }
 
 .catalog__item-card {
@@ -57,22 +55,14 @@
   width: 76px;
   margin: 0;
   margin-bottom: 14px;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  .font-upper(400, 16px, 20px);
   align-items: center;
-  text-transform: uppercase;
   color: #222222;
 }
 
 .catalog__product-charachteristics {
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
+  .font-main(400, 12px, 16px);
+  font-family: "Arial", "Oswald", sans-serif;
   color: #444444;
 }
 
@@ -109,23 +99,15 @@
 
 .catalog__show-more-text {
   margin-bottom: 8px;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  .font-upper(400, 16px, 20px);
   text-align: center;
-  text-transform: uppercase;
   color: #111111;
 }
 
 .catalog__show-more-description {
   margin-bottom: 21px;
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
+  .font-main(400, 12px, 16px);
+  font-family: "Arial", "Oswald", sans-serif;
   text-align: center;
   color: #444444;
 }
@@ -133,15 +115,10 @@
 .catalog__button-more {
   margin-bottom: 25px;
   background-color: #f2f2f2;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  .font-upper(400, 16px, 20px);
   display: flex;
   align-items: center;
   text-align: center;
-  text-transform: uppercase;
   color: #444444;
 
   &:hover {

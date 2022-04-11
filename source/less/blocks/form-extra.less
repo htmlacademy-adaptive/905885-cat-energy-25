@@ -7,10 +7,13 @@
 }
 
 .form-extra__list {
+  .site-list();
   margin-bottom: 34px;
 }
 
 .form-extra__item {
+  .site-list-item();
+
   &:not(:last-child) {
     margin-bottom: 13px;
   }
@@ -26,12 +29,7 @@
 }
 
 .form-extra__text {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+  .font-upper(400, 16px, 18px);
   color: #000000;
 }
 

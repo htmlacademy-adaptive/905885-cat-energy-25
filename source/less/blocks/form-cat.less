@@ -16,16 +16,17 @@
   padding-left: 15px;
   border: 1px solid #e7e7e7;
   box-sizing: border-box;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+  .font-upper(400, 16px, 18px);
   color: #444444;
 }
 
+.form-cat__list {
+  .site-list();
+}
+
 .form-cat__item {
+  .site-list-item();
+
   &:not(:last-child) {
     margin-bottom: 14px;
   }
@@ -35,11 +36,6 @@
   margin-right: 12px;
   display: flex;
   align-items: center;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
+  .font-upper(400, 16px, 20px);
   color: #444444;
 }

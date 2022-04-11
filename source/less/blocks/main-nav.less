@@ -20,6 +20,7 @@
 }
 
 .main-nav__list {
+  .site-list();
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -28,23 +29,18 @@
   align-items: center;
 }
 
-.site-list__item {
+.main-nav__item {
+  .site-list-item();
   text-align: center;
   width: 100%;
   padding-top: 22px;
   padding-bottom: 24px;
-  border-bottom: @border-bottom;
+  .border-bottom();
   background-color: #ffffff;
 }
 
-.site-list__link {
-  text-decoration: none;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
+.main-nav__link {
+  .font-upper(500, 20px, 20px);
   color: #000000;
 }
 
@@ -54,5 +50,5 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: @border-bottom;
+  .border-bottom();
 }

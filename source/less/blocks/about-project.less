@@ -3,10 +3,12 @@
 }
 
 .about-project__list {
+  .site-list();
   margin-bottom: 53px;
 }
 
 .about-project__item {
+  .site-list-item();
   position: relative;
   display: flex;
   flex-direction: row;
@@ -14,77 +16,70 @@
   &:not(:last-child) {
     margin-bottom: 26px;
   }
+
+  &--leaf {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: @main-background-color;
+      background-image: url("../../img/icon_leaf.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--powder {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: @main-background-color;
+      background-image: url("../../img/icon_tub.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--cutlery {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: @main-background-color;
+      background-image: url("../../img/icon_eat.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--clock {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: @main-background-color;
+      background-image: url("../../img/icon_alarm.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
 .about-project__title {
   margin: 0;
   margin-bottom: 42px;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-}
-
-.about-project__item--leaf {
-  &::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: #68b738;
-    background-image: url("../../img/icon_leaf.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-.about-project__item--powder {
-  &::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: #68b738;
-    background-image: url("../../img/icon_tub.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-.about-project__item--cutlery {
-  &::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: #68b738;
-    background-image: url("../../img/icon_eat.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-.about-project__item--clock {
-  &::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: #68b738;
-    background-image: url("../../img/icon_alarm.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  .font-main(400, 36px, 40px);
 }
 
 .about-project__paragraph {
   margin: 0;
   margin-left: 80px;
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  .font-main(400, 14px, 18px);
+  font-family: "Arial", "Oswald", sans-serif;
   color: #444444;
 }

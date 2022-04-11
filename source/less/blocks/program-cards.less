@@ -1,55 +1,53 @@
 .program-cards__list {
+  .site-list();
   margin: 0 20px;
   margin-bottom: 20px;
 }
 
 .program-cards__item {
+  .site-list-item();
   position: relative;
   display: flex;
   flex-direction: column;
   width: 280px;
   height: 266px;
   background-color: #f2f2f2;
+  font-family: "Arial", "Oswald", sans-serif;
 
   &:not(:last-child) {
     margin-bottom: 20px;
   }
-}
 
-.program-cards__item--loss {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 21px;
-    left: 22px;
-    width: 50px;
-    height: 54px;
-    background-image: url("../../img/program-cat-slim.svg");
-    background-repeat: no-repeat;
+  &--loss {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 21px;
+      left: 22px;
+      width: 50px;
+      height: 54px;
+      background-image: url("../../img/program-cat-slim.svg");
+      background-repeat: no-repeat;
+    }
   }
-}
 
-.program-cards__item--gain {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 21px;
-    left: 13px;
-    width: 67px;
-    height: 54px;
-    background-image: url("../../img/program-cat-back.svg");
-    background-repeat: no-repeat;
+  &--gain {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 21px;
+      left: 13px;
+      width: 67px;
+      height: 54px;
+      background-image: url("../../img/program-cat-back.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
 
 .program-cards__title {
   margin: 30px 52px 29px 91px;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 37px;
-  text-transform: uppercase;
+  .font-upper(400, 24px, 37px);
   text-align: center;
 }
 
@@ -58,17 +56,13 @@
   margin-bottom: 19px;
   padding-bottom: 23px;
   border-bottom: 1px solid #d9d9d9;
+  color: #444444;
 }
 
 .program-cards__link {
   margin-left: 19px;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
+  margin-bottom: 22px;
+  .font-upper(400, 16px, 16px);
   color: #000000;
 
   &:active {
@@ -76,6 +70,6 @@
   }
 }
 
-.program-cards__link__image {
+.program-cards__link-image {
   margin-left: 10px;
 }

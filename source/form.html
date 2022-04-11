@@ -20,22 +20,22 @@
             <span class="visually-hidden">Открыть меню.</span>
           </button>
         </div>
-          <ul class="main-nav__list site-list visually-hidden">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">Главная</a>
+          <ul class="main-nav__list visually-hidden">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item site-list__item--current">
-              <a class="site-list__link">Подбор программы</a>
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link">Подбор программы</a>
             </li>
           </ul>
       </nav>
     </header>
 
     <main class="form-container">
-      <h1 class="form-title">Подбор программы</h1>
+      <h1 class="form-container-title">Подбор программы</h1>
       <section class="about-cat">
         <h2 class="visually-hidden">О коте</h2>
         <form class="about-cat__form" action="https://echo.htmlacademy.ru" method="get">
@@ -43,20 +43,20 @@
             программу питания для вашего кота</p>
           <fieldset class="form-cat fieldset">
             <h3 class="visually-hidden">Данные кота</h3>
-            <ul class="form-cat__list site-list">
-              <li class="form-cat__item site-list-item">
+            <ul class="form-cat__list">
+              <li class="form-cat__item">
                 <label class="form-cat__name form-label">
                   <span class="form-cat__text form-text">Имя:*</span>
                   <input class="form-cat__input form-input" type="text" id="cat__name" name="cat__name" value="Барсик" required>
                 </label>
               </li>
-              <li class="form-cat__item site-list-item">
+              <li class="form-cat__item">
                 <label class="form-cat__weight form-label">
                   <span class="form-cat__text form-text">Вес (кг):*</span>
                   <input class="form-cat__input form-input" type="text" id="cat__weight" name="cat__weight" value="7" required>
                 </label>
               </li>
-              <li class="form-cat__item site-list-item">
+              <li class="form-cat__item">
                 <label class="form-cat__age form-label">
                   <span class="form-cat__text form-text">Возраст (лет):</span>
                   <input class="form-cat__input form-input" type="text" id="cat__age" name="cat__age" value="7" required>
@@ -66,20 +66,20 @@
           </fieldset>
           <fieldset class="program-type fieldset">
             <h3 class="visually-hidden">Цель питания</h3>
-            <ul class="program-type__list site-list">
-              <li class="program-type__item site-list-item">
+            <ul class="program-type__list">
+              <li class="program-type__item">
                 <label class="program-type__label" for="program-type__loss">
                   <input class="program-type__input" type="radio" name="program-type" id="program-type__loss" value="weight-loss" checked>
                   <span class="program-type__text form-text">Похудение</span>
                 </label>
               </li>
-              <li class="program-type__item site-list-item">
+              <li class="program-type__item">
                 <label class="program-type__label" for="program-type__gain">
                   <input class="program-type__input" type="radio" name="program-type" id="program-type__gain" value="weight-gain">
                   <span class="program-type__text form-text">Набор массы</span>
                 </label>
               </li>
-              <li class="program-type__item site-list-item">
+              <li class="program-type__item">
                 <label class="program-type__label" for="program-type__need-help">
                   <input class="program-type__input" type="radio" name="program-type" id="program-type__need-help" value="need-help">
                   <span class="program-type__text form-text">Не знаю (нужен ваш совет)</span>
@@ -90,14 +90,14 @@
           <fieldset class="owner-contacts fieldset">
             <h3 class="owner-contacts__title form-title-field">Контактные данные
               (владельца кота)</h3>
-            <ul class="owner-contacts__list site-list">
-              <li class="owner-contacts__item site-list-item">
+            <ul class="owner-contacts__list">
+              <li class="owner-contacts__item">
                 <label class="owner-contacts__email form-label" for="owner-email">
                   <span class="owner-contacts__text form-text">e-mail:*</span>
                   <input class="owner-contacts__input form-input" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
                 </label>
               </li>
-              <li class="owner-contacts__item site-list-item">
+              <li class="owner-contacts__item">
                 <label class="owner-contacts__phone form-label" for="owner-phone">
                   <span class="owner-contacts__text form-text">телефон:*</span>
                   <input class="owner-contacts__input form-input" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
@@ -111,26 +111,26 @@
           </fieldset>
           <fieldset class="form-extra fieldset">
             <h3 class="form-extra__title form-title-field">Дополнительно</h3>
-            <ul class="form-extra__list site-list">
-              <li class="form-extra__item site-list-item">
+            <ul class="form-extra__list">
+              <li class="form-extra__item">
                 <label class="form-extra__label" for="extra__sugar">
                   <input class="form-extra__input" type="checkbox" name="extra" id="extra__sugar" value="sweetener">
                   <span class="form-extra__text form-text">сахарозаменитель</span>
                 </label>
               </li>
-              <li class="form-extra__item site-list-item">
+              <li class="form-extra__item">
                 <label class="form-extra__label" for="extra__water">
                   <input class="form-extra__input" type="checkbox" name="extra" id="extra__water" value="water">
                   <span class="form-extra__text form-text">питьевая вода</span>
                 </label>
               </li>
-              <li class="form-extra__item site-list-item">
+              <li class="form-extra__item">
                 <label class="form-extra__label" for="extra__milk">
                   <input class="form-extra__input" type="checkbox" name="extra" id="extra__milk" value="milk">
                   <span class="form-extra__text form-text">молоко</span>
                 </label>
               </li>
-              <li class="form-extra__item site-list-item">
+              <li class="form-extra__item">
                 <label class="form-extra__label" for="extra__vitamins">
                   <input class="form-extra__input" type="checkbox" name="extra" id="extra__vitamins" value="vitamins">
                   <span class="form-extra__text form-text">витамины</span>
@@ -166,8 +166,8 @@
         </a>
       </div>
       <div class="main-footer__social social">
-        <ul class="main-footer__list site-list">
-          <li class="main-footer__item site-list-item">
+        <ul class="main-footer__list">
+          <li class="main-footer__item">
             <a class="main-footer__link" href="#">
               <span class="visually-hidden">мы вконтакте.</span>
               <svg class="social__image" width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -175,7 +175,7 @@
               </svg>
             </a>
           </li>
-          <li class="main-footer__item site-list-item">
+          <li class="main-footer__item">
             <a class="main-footer__link" href="#">
               <span class="visually-hidden">мы в ютуб.</span>
               <svg class="social__image" width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +183,7 @@
               </svg>
             </a>
           </li>
-          <li class="main-footer__item site-list-item">
+          <li class="main-footer__item">
             <a class="main-footer__link" href="#">
               <span class="visually-hidden">мы в телеграм.</span>
               <svg class="social__image" width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">

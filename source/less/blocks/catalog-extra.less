@@ -11,7 +11,7 @@
 
 .catalog-extra-paragraph {
   margin: 0;
-  font-family: 'Arial';
+  font-family: "Arial", "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -20,23 +20,25 @@
 }
 
 .catalog-extra__title-container {
-  border-bottom: @border-bottom;
+  .border-bottom();
 }
 
 .catalog-extra__list {
+  .site-list();
   margin-bottom: 35px;
 }
 
 .catalog-extra__item {
+  .site-list-item();
   padding-top: 13px;
   padding-bottom: 19px;
-  border-bottom: @border-bottom;
+  .border-bottom();
 }
 
 .catalog-extra__title {
   margin: 0;
   margin-bottom: 36px;
-  font-family: 'Oswald';
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -48,11 +50,7 @@
 .catalog-extra__product-title {
   margin: 0;
   margin-bottom: 13px;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
+  .font-upper(400, 16px, 16px);
   text-transform: uppercase;
   color: #222222;
 }
@@ -79,14 +77,11 @@
   }
 }
 
-.catalog-extra__gift__description {
+.catalog-extra__gift-description {
   padding: 187px 61px 43px 58px;
   width: 161px;
   text-align: center;
-  font-family: 'Arial';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  .font-main(400, 16px, 20px);
+  font-family: "Arial", "Oswald", sans-serif;
   color: #ffffff;
 }
