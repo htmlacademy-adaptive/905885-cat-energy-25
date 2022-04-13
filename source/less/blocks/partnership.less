@@ -1,5 +1,6 @@
 .partnership {
   background-color: #ffffff;
+  position: relative;
 }
 
 .form-parntnership {
@@ -10,12 +11,32 @@
   margin: 26px 20px;
   margin-top: 0;
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding: 56px 70px;
+    justify-content: space-between;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 405px;
+    margin: 0;
+    position: absolute;
+    padding: 60px 80px 56px;
+    top: 95px;
+    left: 110px;
+  }
 }
 
 .partnership-paragraph {
   display: block;
   width: 139px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 160px;
+  }
 }
 
 .partnership__invite {
@@ -24,12 +45,62 @@
   margin-right: 2px;
   .font-upper(400, 16px, 20px);
   color: #111111;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    .font-upper(400, 20px, 26px);
+  }
 }
 
 .partnership__address {
   margin: 0;
   margin-top: 26px;
   .font-main(400, 14px, 20px);
+  text-align: right;
   font-family: "Arial", "Oswald", sans-serif;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    .font-main(400, 16px, 20px);
+    font-family: "Arial", "Oswald", sans-serif;
+
+    &--city {
+      margin-top: 10px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
+
+.partnership__location-mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.partnership__location-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.partnership__location-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
