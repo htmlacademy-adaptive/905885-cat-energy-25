@@ -3,10 +3,36 @@
   display: flex;
   flex-direction: row;
   padding-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding-top: 55px;
+
+    &::after {
+      content: "";
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 720px;
+      height: 694px;
+      background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/index-background-desktop.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+    }
+  }
 }
 
 .logo {
   margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -19,8 +45,38 @@
 
 .main-header__link {
   margin-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+    margin-right: 93px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
+    margin-left: 110px;
+    margin-right: 0;
+  }
 }
 
 .main-header__link-text {
   margin-top: 13px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__logo-image {
+  &--tablet {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+
+    &--tablet {
+      display: block;
+    }
+  }
 }
