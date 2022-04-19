@@ -1,5 +1,14 @@
 .form-container {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .form-container-title {
@@ -7,4 +16,11 @@
   .font-main(400, 36px, 36px);
   color: #000000;
   border-bottom: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-top: 65px;
+    margin-bottom: 54px;
+    .font-main(400, 60px, 60px);
+  }
 }

@@ -7,6 +7,11 @@
 .about-cat__form {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .about-cat__description {
@@ -14,4 +19,37 @@
   margin-bottom: 39px;
   .font-upper(400, 14px, 18px);
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    width: 323px;
+    margin: 0;
+    margin-bottom: 66px;
+    .font-upper(400, 20px, 30px);
+  }
+}
+
+.about-cat__form-button {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-right: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+  }
+}
+
+.about-cat__form-application {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+    display: flex;
+  }
+}
+
+.about-cat__form-required-text {
+  @media (min-width: @tablet-width) {
+    .font-main(400, 16px, 16px);
+    font-family: "Arial", "Oswald", sans-serif;
+    columns: #000000;
+  }
 }

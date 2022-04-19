@@ -1,9 +1,22 @@
 .form-manners {
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .form-manners__title {
   margin-bottom: 47px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+    .font-main(400, 36px, 36px);
+  }
 }
 
 .form-manners__description {
@@ -16,4 +29,14 @@
   box-sizing: border-box;
   .font-upper(400, 16px, 18px);
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    width: 631px;
+    height: 174px;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 1220px;
+  }
 }

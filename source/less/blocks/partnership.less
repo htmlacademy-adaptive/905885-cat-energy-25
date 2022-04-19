@@ -1,13 +1,24 @@
 .partnership {
   background-color: #ffffff;
   position: relative;
+
+  &--background {
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: #f2f2f2;
+    width: 768px;
+    margin-left: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -110px;
+    width: 1440px;
+  }
 }
 
-.form-parntnership {
-  background-color: #f2f2f2;
-}
-
-.partnership-block {
+.partnership__block {
   margin: 26px 20px;
   margin-top: 0;
   display: flex;
@@ -16,7 +27,6 @@
     margin-bottom: 0;
     padding: 56px 70px;
     justify-content: space-between;
-    background-color: #ffffff;
   }
 
   @media (min-width: @desktop-width) {
@@ -26,6 +36,7 @@
     padding: 60px 80px 56px;
     top: 95px;
     left: 110px;
+    background-color: #ffffff;
   }
 }
 
@@ -64,14 +75,16 @@
     margin: 0;
     .font-main(400, 16px, 20px);
     font-family: "Arial", "Oswald", sans-serif;
-
-    &--city {
-      margin-top: 10px;
-    }
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
+  }
+}
+
+.partnership__address-city {
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
   }
 }
 
