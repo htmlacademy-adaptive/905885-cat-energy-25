@@ -12,17 +12,19 @@
     position: relative;
     padding-top: 55px;
 
-    &::after {
-      content: "";
-      z-index: 0;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 720px;
-      height: 694px;
-      background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/index-background-desktop.jpg");
-      background-repeat: no-repeat;
-      background-position: right top;
+    &--background {
+      &::after {
+        content: "";
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 720px;
+        height: 694px;
+        background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/index-background-desktop.jpg");
+        background-repeat: no-repeat;
+        background-position: right top;
+      }
     }
   }
 }

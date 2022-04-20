@@ -1,10 +1,28 @@
 .owner-contacts {
   padding: 0 20px;
   padding-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .owner-contacts__list {
   .site-list();
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .owner-contacts__item {
@@ -24,4 +42,25 @@
 .owner-contacts__title {
   margin: 0;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+    .font-main(400, 36px, 36px);
+  }
+}
+
+.owner-contacts__text {
+  width: 14%;
+}
+
+.owner-contacts__email {
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+}
+
+.owner-contacts__phone {
+  @media (min-width: @desktop-width) {
+    width: 572px;
+  }
 }

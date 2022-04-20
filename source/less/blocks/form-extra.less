@@ -1,14 +1,41 @@
 .form-extra {
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .form-extra__title {
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+    .font-main(400, 36px, 36px);
+  }
 }
 
 .form-extra__list {
   .site-list();
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+    width: 565px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 61px;
+    width: 1124px;
+  }
 }
 
 .form-extra__item {
@@ -17,20 +44,41 @@
   &:not(:last-child) {
     margin-bottom: 13px;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 220px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
 }
 
 .form-extra__label {
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    width: 220px;
+  }
 }
 
 .form-extra__input {
   margin: 0;
   margin-right: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .form-extra__text {
   .font-upper(400, 16px, 18px);
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    .font-upper(400, 20px, 30px);
+  }
 }
 
 .about-cat__form__required-text {

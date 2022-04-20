@@ -3,6 +3,17 @@
   padding-bottom: 24px;
   margin-bottom: 22px;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 0;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+    margin-right: 80px;
+  }
 }
 
 .form-label {
@@ -38,4 +49,8 @@
   align-items: center;
   .font-upper(400, 16px, 20px);
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
 }
