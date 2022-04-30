@@ -119,14 +119,14 @@
         </div>
           <div class="living-example__cats-slider">
             <div class="living-example__cats">
-              <img class="living-example__image" src="img/cat-boris.png" width="280" height="232" alt="кот борис до.">
+              <img class="living-example__image" id="catImage" src="img/cat-before.png" width="280" height="232" alt="кот борис до.">
               <img class="living-example__image-tablet" src="img/image-cat-tablet.png" width="592" height="511" alt="кот до и после">
             </div>
             <div class="living-example__slider">
               <p class="living-example__slider-text">Было</p>
-              <div class="living-example__slider-container">
-                <button class="living-example__slider-button living-example__slider-button--current" type="button"></button>
-                <button class="living-example__slider-button living-example__slider-button--closed" type="button"></button>
+              <div class="living-example__slider-container living-example__slider-container--before">
+                <button class="living-example__slider-button" type="button"></button>
+                <!-- <button class="living-example__slider-button living-example__slider-button--closed" type="button"></button> -->
               </div>
               <input class="living-example__input" type="range" name="living-example__slider" id="living-example__slider" min="0" max="2" value="1">
               <p class="living-example__slider-text">Стало</p>
@@ -146,6 +146,7 @@
           </div>
           <div class="partnership__location">
             <iframe
+              class="partnership__map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
               width="320"
               height="362"
