@@ -1,6 +1,4 @@
 .form-extra {
-  padding: 0 20px;
-
   @media (min-width: @tablet-width) {
     padding: 0;
   }
@@ -12,8 +10,10 @@
 
 .form-extra__title {
   margin-bottom: 34px;
+  max-width: 141px;
 
   @media (min-width: @tablet-width) {
+    max-width: 211px;
     margin-bottom: 57px;
     .font-main(400, 36px, 36px);
   }
@@ -22,8 +22,10 @@
 .form-extra__list {
   .site-list();
   margin-bottom: 34px;
+  margin-left: 20px;
 
   @media (min-width: @tablet-width) {
+    margin-left: 70px;
     margin-bottom: 54px;
     width: 565px;
     display: flex;
@@ -33,6 +35,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 110px;
+    margin-right: 110px;
     margin-bottom: 61px;
     width: 1124px;
   }
@@ -42,7 +46,7 @@
   .site-list-item();
 
   &:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: @tablet-width) {
@@ -73,10 +77,14 @@
 }
 
 .form-extra__text {
+  margin-top: 7px;
+  margin-left: 46px;
   .font-upper(400, 16px, 18px);
   color: #000000;
 
   @media (min-width: @tablet-width) {
+    margin-top: 5px;
+    margin-left: 59px;
     .font-upper(400, 20px, 30px);
   }
 }

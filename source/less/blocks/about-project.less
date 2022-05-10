@@ -18,6 +18,7 @@
 .about-project__list {
   .site-list();
   margin-bottom: 53px;
+  counter-reset: program;
 
   @media (min-width: @tablet-width) {
     width: 633px;
@@ -28,8 +29,7 @@
   @media (min-width: @desktop-width) {
     width: 1220px;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: left;
   }
 }
 
@@ -38,6 +38,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
+  counter-increment: program;
 
   &:not(:last-child) {
     margin-bottom: 26px;
@@ -110,22 +111,22 @@
       margin-bottom: 37px;
     }
 
+    &::after {
+      content: counter(program);
+      position: absolute;
+      z-index: -1;
+      .font-main(400, 280px, 280px);
+      color: #f2f2f2;
+      top: 0;
+      right: 0;
+    }
+
     &--leaf {
       &::before {
         content: "";
         top: 40px;
         width: 80px;
         height: 80px;
-      }
-
-      &::after {
-        position: absolute;
-        content: "1";
-        z-index: -1;
-        .font-main(400, 280px, 280px);
-        color: #f2f2f2;
-        top: 0;
-        right: 20px;
       }
     }
 
@@ -135,16 +136,6 @@
         top: 40px;
         width: 80px;
         height: 80px;
-      }
-
-      &::after {
-        position: absolute;
-        content: "2";
-        z-index: -1;
-        .font-main(400, 280px, 280px);
-        color: #f2f2f2;
-        top: 0;
-        right: 0;
       }
     }
 
@@ -156,16 +147,6 @@
         width: 80px;
         height: 80px;
       }
-
-      &::after {
-        position: absolute;
-        content: "3";
-        z-index: -1;
-        .font-main(400, 280px, 280px);
-        color: #f2f2f2;
-        top: 0;
-        right: 0;
-      }
     }
 
     &--clock {
@@ -176,16 +157,6 @@
         width: 80px;
         height: 80px;
       }
-
-      &::after {
-        position: absolute;
-        content: "4";
-        z-index: -1;
-        .font-main(400, 280px, 280px);
-        color: #f2f2f2;
-        top: 0;
-        right: -5px;
-      }
     }
   }
 
@@ -193,12 +164,16 @@
     display: block;
     box-sizing: border-box;
     padding: 151px auto 57px 0;
-    width: 306px;
-    height: 280px;
+    width: 230px;
+    min-height: 280px;
     flex-direction: column;
 
     &:nth-child(2n) {
       margin-left: 0;
+    }
+
+    &:not(:nth-child(4n)) {
+      margin-right: 95px;
     }
 
     &:not(:last-child) {
@@ -212,16 +187,6 @@
         width: 80px;
         height: 80px;
       }
-
-      &::after {
-        position: absolute;
-        content: "1";
-        z-index: -1;
-        .font-main(400, 280px, 280px);
-        color: #f2f2f2;
-        top: 0;
-        right: 20px;
-      }
     }
 
     &--powder {
@@ -230,16 +195,6 @@
         top: 40px;
         width: 80px;
         height: 80px;
-      }
-
-      &::after {
-        position: absolute;
-        content: "2";
-        z-index: -1;
-        .font-main(400, 280px, 280px);
-        color: #f2f2f2;
-        top: 0;
-        right: 0;
       }
     }
 
@@ -251,16 +206,6 @@
         width: 80px;
         height: 80px;
       }
-
-      &::after {
-        position: absolute;
-        content: "3";
-        z-index: -1;
-        .font-main(400, 280px, 280px);
-        color: #f2f2f2;
-        top: 0;
-        right: 0;
-      }
     }
 
     &--clock {
@@ -270,16 +215,6 @@
         top: 40px;
         width: 80px;
         height: 80px;
-      }
-
-      &::after {
-        position: absolute;
-        content: "4";
-        z-index: -1;
-        .font-main(400, 280px, 280px);
-        color: #f2f2f2;
-        top: 0;
-        right: -5px;
       }
     }
   }

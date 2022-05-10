@@ -1,0 +1,13 @@
+.decorative-title {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    background-color: @main-background-color;
+  }
+}

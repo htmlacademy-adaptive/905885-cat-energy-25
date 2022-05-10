@@ -12,11 +12,14 @@
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__panel">
           <a class="main-header__link logo" href="#">
-            <img class="main-header__logo-image" src="img/logo-image.svg" width="34" height="38" alt="логотип сайта.">
-            <img class="main-header__logo-image--tablet" src="img/logo-tablet.svg" width="174" height="52" alt="логотип сайта.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg 1x, img/logo-desktop@2x.svg 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg 1x, img/logo-tablet@2x.svg 2x">
+              <img class="main-header__logo-image" src="img/logo-mobile.svg" srcset="img/logo-mobile@2x.svg 2x" width="34" height="38" alt="логотип сайта.">
+            </picture>
           </a>
           <a class="main-header__link-text logo" href="#">
-            <img class="main-header__logo-text" src="img/text-logo.svg" alt="Главная | cat-energy.">
+            <img class="main-header__logo-text" src="img/text-logo.svg" width="101" height="20" alt="Главная | cat-energy.">
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
@@ -45,7 +48,11 @@
           <h2 class="feed-program__title">Функциональное питание для котов</h2>
           <p class="feed-program__description">Занялся собой? Займись котом!</p>
         </div>
-          <img class="feed-program__image" src="img/feed-program-image.png" width="280" height="270" alt="Питание со вкусом курицы.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/index-can.png 1x, img/index-can@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+          <img class="feed-program__image" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Питание со вкусом курицы.">
+        </picture>
           <a class="feed-program__link button" href="form.html">Подобрать программу</a>
       </section>
 
@@ -99,9 +106,7 @@
 
       <section class="living-example">
         <div class="living-example__text-container">
-          <div class="living-example__title-background">
-            <h2 class="living-example__title">Живой пример</h2>
-          </div>
+          <h2 class="living-example__title">Живой пример</h2>
           <p class="living-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
           <div class="living-example__result-tablet">
             <div class="living-example__result">
@@ -119,22 +124,26 @@
         </div>
           <div class="living-example__cats-slider">
             <div class="living-example__cats">
-              <img class="living-example__image" id="catImage" src="img/cat-before.png" width="280" height="232" alt="кот борис до.">
-              <img class="living-example__image-tablet" src="img/image-cat-tablet.png" width="592" height="511" alt="кот до и после">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x">
+                <img class="living-example__image" id="catImage" src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" width="280" height="232" alt="кот борис до.">
+              </picture>
             </div>
             <div class="living-example__slider">
               <p class="living-example__slider-text">Было</p>
               <div class="living-example__slider-container living-example__slider-container--before">
                 <button class="living-example__slider-button" type="button"></button>
-                <!-- <button class="living-example__slider-button living-example__slider-button--closed" type="button"></button> -->
               </div>
-              <input class="living-example__input" type="range" name="living-example__slider" id="living-example__slider" min="0" max="2" value="1">
+              <div class="living-example__slider-line">
+                <button class="living-example__slider-control"></button>
+              </div>
+              <input class="visually-hidden living-example__input" type="range" name="living-example__slider" id="living-example__slider" min="0" max="2" value="1">
               <p class="living-example__slider-text">Стало</p>
             </div>
           </div>
       </section>
 
-      <section class="partnership">
+      <section class="partnership partnership-main">
         <h2 class="visually-hidden">Сотрудничество и местоположение</h2>
           <div class="partnership__block">
             <p class="partnership__invite partnership-paragraph">приглашаем к сотрудничеству дилеров!</p>
@@ -194,7 +203,7 @@
           </ul>
         </div>
         <div class="main-footer__html-academy">
-          <a class="main-footer__link-academy" href="#">
+          <a class="main-footer__link-academy" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="main-footer__link main-footer__text-academy">HTML Academy</p>
             <svg class="main-footer__html-logo" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>

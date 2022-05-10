@@ -7,6 +7,8 @@
   @media (min-width: @tablet-width) {
     border: 1px solid #e7e7e7;
     margin: 0;
+    margin-left: 71px;
+    margin-right: 67px;
     margin-bottom: 75px;
     padding: 25px 0 25px 28px;
   }
@@ -14,6 +16,9 @@
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
     width: 568px;
+    margin: 0;
+    margin-right: 110px;
+    margin-bottom: 72px;
     padding: 25px 28px;
     border: 1px solid #e7e7e7;
   }
@@ -27,21 +32,26 @@
   .site-list-item();
 
   &:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 19px;
   }
 }
 
 .program-type__label {
+  position: relative;
   display: flex;
 }
 
 .program-type__text {
+  margin-top: 8px;
+  margin-left: 45px;
   display: flex;
   align-items: center;
   .font-upper(400, 16px, 18px);
   color: #222222;
 
   @media (min-width: @tablet-width) {
+    margin-top: 5px;
+    margin-left: 60px;
     .font-upper(400, 20px, 30px);
   }
 }

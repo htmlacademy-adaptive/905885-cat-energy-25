@@ -1,0 +1,55 @@
+.control-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+
+  .program-type__input[type="radio"] + & {
+    border-radius: 50%;
+  }
+
+  .program-type__input[type="radio"]:checked + &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 13.5px;
+    height: 13.5px;
+    background-color: @main-background-color;
+    border-radius: 50%;
+  }
+
+  .form-extra__input[type="checkbox"]:checked + &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 6px;
+    width: 18px;
+    height: 14px;
+    background-image: url("../../img/checkbox-marker.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+
+    .program-type__input[type="radio"]:checked + &::before {
+      top: 11px;
+      left: 11px;
+      width: 18px;
+      height: 18px;
+    }
+
+    .form-extra__input[type="checkbox"]:checked + &::before {
+      top: 11px;
+      left: 8px;
+      width: 24px;
+      height: 19px;
+      background-image: url("../../img/checkbox-marker.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}

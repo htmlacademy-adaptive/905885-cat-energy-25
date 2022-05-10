@@ -2,7 +2,12 @@
   margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
+    margin: 0 30px;
     border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 110px;
   }
 }
 
@@ -231,9 +236,9 @@
 
   &::before,
   &::after {
+    content: "";
     position: absolute;
     left: 0;
-    content: "";
     width: 30px;
     height: 2px;
     background-color: #d3d3d3;

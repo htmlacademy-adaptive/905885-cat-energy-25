@@ -1,6 +1,4 @@
 .form-manners {
-  padding: 0 20px;
-
   @media (min-width: @tablet-width) {
     padding: 0;
   }
@@ -11,9 +9,11 @@
 }
 
 .form-manners__title {
+  max-width: 121px;
   margin-bottom: 47px;
 
   @media (min-width: @tablet-width) {
+    min-width: 182px;
     margin-bottom: 76px;
     .font-main(400, 36px, 36px);
   }
@@ -23,6 +23,7 @@
   display: block;
   padding: 10px 15px 10px 12px;
   margin-bottom: 23px;
+  margin-left: 20px;
   width: 280px;
   height: 150px;
   border: 1px solid #e7e7e7;
@@ -33,10 +34,13 @@
   @media (min-width: @tablet-width) {
     width: 631px;
     height: 174px;
+    margin-left: 71px;
     margin-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 110px;
+    margin-right: 110px;
     width: 1220px;
   }
 }
