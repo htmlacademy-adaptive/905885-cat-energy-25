@@ -24,6 +24,11 @@
         background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/index-background-desktop.jpg");
         background-repeat: no-repeat;
         background-position: right top;
+
+        @media (min-resolution: 2dppx) {
+          background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/index-background-desktop@2x.jpg");
+          background-size: cover;
+        }
       }
     }
   }
@@ -46,9 +51,13 @@
 }
 
 .main-header__link {
+  width: 34px;
+  height: 38px;
   margin-left: 20px;
 
   @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 52px;
     margin-left: 30px;
     margin-right: 93px;
   }
@@ -61,24 +70,24 @@
   }
 }
 
+.main-header__logo-image {
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
 .main-header__link-text {
+  width: 101px;
+  height: 18px;
   margin-top: 13px;
 
   @media (min-width: @tablet-width) {
     display: none;
-  }
-}
-
-.main-header__logo-image {
-  &--tablet {
-    display: none;
-  }
-
-  @media (min-width: @tablet-width) {
-    display: none;
-
-    &--tablet {
-      display: block;
-    }
   }
 }

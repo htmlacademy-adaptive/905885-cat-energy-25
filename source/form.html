@@ -11,12 +11,15 @@
     <header class="main-header">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__panel">
-          <a class="main-header__link logo" href="index.html">
-            <img class="main-header__logo-image" src="img/logo-image.svg" width="34" height="38" alt="логотип сайта.">
-            <img class="main-header__logo-image--tablet" src="img/logo-tablet.svg" width="174" height="52" alt="логотип сайта.">
+          <a class="main-header__link logo" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg 1x, img/logo-desktop@2x.svg 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg 1x, img/logo-tablet@2x.svg 2x">
+              <img class="main-header__logo-image" src="img/logo-mobile.svg" srcset="img/logo-mobile@2x.svg 2x" width="34" height="38" alt="логотип сайта.">
+            </picture>
           </a>
           <a class="main-header__link-text logo" href="index.html">
-            <img class="main-header__logo-text" src="img/text-logo.svg" alt="Главная | cat-energy.">
+            <img class="main-header__logo-text" src="img/text-logo.svg" width="101" height="20" alt="Главная | cat-energy.">
           </a>
           <button class="main-nav__toggle main-nav__toggle--active" type="button">
             <span class="visually-hidden">Открыть меню.</span>
@@ -37,11 +40,11 @@
     </header>
 
     <main class="form-container">
-      <h1 class="form-container-title">Подбор программы</h1>
-      <p class="about-cat__description">Заполните анкету, и мы подберем
-        программу питания для вашего кота</p>
+      <h1 class="form-container__title">Подбор программы</h1>
       <section class="about-cat">
         <h2 class="visually-hidden">О коте</h2>
+        <p class="about-cat__description">Заполните анкету, и мы подберем
+          программу питания для вашего кота</p>
         <form class="about-cat__form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="form-cat fieldset">
             <h3 class="visually-hidden">Данные кота</h3>
@@ -71,70 +74,85 @@
             <ul class="program-type__list">
               <li class="program-type__item">
                 <label class="program-type__label" for="program-type__loss">
-                  <input class="program-type__input" type="radio" name="program-type" id="program-type__loss" value="weight-loss" checked>
+                  <input class="visually-hidden program-type__input" type="radio" name="program-type" id="program-type__loss" value="weight-loss" checked>
+                  <span class="control-mark"></span>
                   <span class="program-type__text form-text">Похудение</span>
                 </label>
               </li>
               <li class="program-type__item">
                 <label class="program-type__label" for="program-type__gain">
-                  <input class="program-type__input" type="radio" name="program-type" id="program-type__gain" value="weight-gain">
+                  <input class="visually-hidden program-type__input" type="radio" name="program-type" id="program-type__gain" value="weight-gain">
+                  <span class="control-mark"></span>
                   <span class="program-type__text form-text">Набор массы</span>
                 </label>
               </li>
               <li class="program-type__item">
                 <label class="program-type__label" for="program-type__need-help">
-                  <input class="program-type__input" type="radio" name="program-type" id="program-type__need-help" value="need-help">
+                  <input class="visually-hidden program-type__input" type="radio" name="program-type" id="program-type__need-help" value="need-help">
+                  <span class="control-mark"></span>
                   <span class="program-type__text form-text">Не знаю (нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="owner-contacts fieldset">
-            <h3 class="owner-contacts__title form-title-field">Контактные данные
-              (владельца кота)</h3>
+            <div class="decorative-title">
+              <h3 class="owner-contacts__title form-title-field">Контактные данные
+                (владельца кота)</h3>
+            </div>
             <ul class="owner-contacts__list">
               <li class="owner-contacts__item">
                 <label class="owner-contacts__email form-label" for="owner-email">
                   <span class="owner-contacts__text form-text">e-mail:*</span>
                   <input class="owner-contacts__input form-input" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
+                  <span class="owner-contacts__input-icon"></span>
                 </label>
               </li>
               <li class="owner-contacts__item">
                 <label class="owner-contacts__phone form-label" for="owner-phone">
                   <span class="owner-contacts__text form-text">телефон:*</span>
                   <input class="owner-contacts__input form-input" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
+                  <span class="owner-contacts__input-icon"></span>
                 </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form-manners fieldset">
-            <h3 class="form-manners__title form-title-field">Комментарий</h3>
+            <div class="decorative-title">
+              <h3 class="form-manners__title form-title-field">Комментарий</h3>
+            </div>
             <textarea class="form-manners__description" name="form-manners__description" id="manners__description" cols="35" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="form-extra fieldset">
-            <h3 class="form-extra__title form-title-field">Дополнительно</h3>
+            <div class="decorative-title">
+              <h3 class="form-extra__title form-title-field">Дополнительно</h3>
+            </div>
             <ul class="form-extra__list">
               <li class="form-extra__item">
                 <label class="form-extra__label" for="extra__sugar">
-                  <input class="form-extra__input" type="checkbox" name="extra" id="extra__sugar" value="sweetener">
+                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__sugar" value="sweetener" checked>
+                  <span class="control-mark"></span>
                   <span class="form-extra__text form-text">сахарозаменитель</span>
                 </label>
               </li>
               <li class="form-extra__item">
                 <label class="form-extra__label" for="extra__water">
-                  <input class="form-extra__input" type="checkbox" name="extra" id="extra__water" value="water">
+                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__water" value="water">
+                  <span class="control-mark"></span>
                   <span class="form-extra__text form-text">питьевая вода</span>
                 </label>
               </li>
               <li class="form-extra__item">
                 <label class="form-extra__label" for="extra__milk">
-                  <input class="form-extra__input" type="checkbox" name="extra" id="extra__milk" value="milk">
+                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__milk" value="milk">
+                  <span class="control-mark"></span>
                   <span class="form-extra__text form-text">молоко</span>
                 </label>
               </li>
               <li class="form-extra__item">
                 <label class="form-extra__label" for="extra__vitamins">
-                  <input class="form-extra__input" type="checkbox" name="extra" id="extra__vitamins" value="vitamins">
+                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__vitamins" value="vitamins">
+                  <span class="control-mark"></span>
                   <span class="form-extra__text form-text">витамины</span>
                 </label>
               </li>
@@ -147,7 +165,7 @@
         </form>
       </section>
 
-      <section class="partnership partnership--form partnership--background">
+      <section class="partnership partnership--background">
         <h2 class="visually-hidden">Сотрудничество и местоположение</h2>
           <div class="partnership__block">
             <p class="partnership__invite partnership-paragraph">приглашаем к сотрудничеству дилеров!</p>
@@ -207,7 +225,7 @@
           </ul>
         </div>
         <div class="main-footer__html-academy">
-          <a class="main-footer__link-academy" href="#">
+          <a class="main-footer__link-academy" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="main-footer__link main-footer__text-academy">HTML Academy</p>
             <svg class="main-footer__html-logo" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>

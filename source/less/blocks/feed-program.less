@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   padding-top: 27px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/feed-program-background@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0;
     position: relative;
@@ -67,17 +71,18 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    margin: 0 auto;
+    margin: 0 30px;
     width: 709px;
     height: 609px;
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
+    left: -52px;
     width: 552px;
     height: 499px;
     margin: 0;
     margin-bottom: 54px;
-    margin-left: -26px;
   }
 }
 

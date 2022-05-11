@@ -19,10 +19,12 @@ catToggle.addEventListener('click', function() {
   if (catContainer.classList.contains('living-example__slider-container--before')) {
     catContainer.classList.remove('living-example__slider-container--before');
     catContainer.classList.add('living-example__slider-container--after');
-    document.getElementById("catImage").src="img/cat-after.png";
+    document.getElementById("catImage").src="img/after-mobile.png";
+    document.getElementById("catImage").srcset="img/after-mobile@2x.png";
   } else {
     catContainer.classList.add('living-example__slider-container--before');
     catContainer.classList.remove('living-example__slider-container--after');
-    document.getElementById("catImage").src="img/cat-before.png";
+    document.getElementById("catImage").src="img/before-mobile.png";
+    document.getElementById("catImage").srcset="img/before-mobile@2x.png";
   }
 });
