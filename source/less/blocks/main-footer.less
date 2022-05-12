@@ -53,21 +53,28 @@
 
 .main-footer__item {
   .site-list-item();
+  vertical-align: middle;
 
   &:not(:last-child) {
-    margin-right: 26px;
+    margin-right: 24px;
   }
 }
 
 .main-footer__link {
+  display: flex;
+
   .font-main(400, 16px, 18px);
   font-family: "Arial", "Oswald", sans-serif;
 
-  &:hover path {
+  & .social__image {
+    fill: #666666;
+  }
+
+  &:hover .social__image {
     fill: @main-background-color;
   }
 
-  &:active path {
+  &:active .social__image {
     opacity: 0.3;
   }
 }
@@ -79,7 +86,11 @@
   font-family: "Arial", "Oswald", sans-serif;
   color: #444444;
 
-  &:hover path {
+  & .main-footer__html-logo {
+    fill: #666666;
+  }
+
+  &:hover .main-footer__html-logo {
     fill: @main-background-color;
   }
 
