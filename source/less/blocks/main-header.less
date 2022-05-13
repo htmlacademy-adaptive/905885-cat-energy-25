@@ -70,15 +70,37 @@
   }
 }
 
-.main-header__logo-image {
-  @media (min-width: @tablet-width) {
+.main-header__logo {
+  &--visible-tablet {
     width: 174px;
     height: 52px;
+    display: none;
+  }
+
+  &--visible-desktop {
+    width: 202px;
+    height: 59px;
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--visible-mobile {
+      display: none;
+    }
+
+    &--visible-tablet {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 202px;
-    height: 59px;
+    &--visible-tablet {
+      display: none;
+    }
+
+    &--visible-desktop {
+      display: block;
+    }
   }
 }
 
