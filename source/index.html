@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat energy | Главная</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
@@ -28,7 +28,7 @@
           </a>
           <a class="main-header__link-text logo" href="#">
             <svg width="101" height="18">
-              <use xlink:href="#logo-text"></use>
+              <use xlink:href="img/sprite.svg#logo-text"></use>
             </svg>
           </a>
           <button class="main-nav__toggle" type="button">
@@ -136,6 +136,8 @@
           <div class="living-example__cats-slider">
             <div class="living-example__cats">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-before.webp 1x, img/cat-before@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile.webp 1x, img/before-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x">
                 <img class="living-example__image" id="catImage" src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" width="280" height="232" alt="кот борис до.">
               </picture>
