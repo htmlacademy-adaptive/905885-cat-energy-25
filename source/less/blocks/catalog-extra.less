@@ -1,5 +1,5 @@
 .catalog-extra {
-  // padding: 0 20px;
+  margin-top: -2px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -12,24 +12,42 @@
   }
 }
 
+.catalog-extra-paragraph {
+  @media (min-width: @tablet-width) {
+    .font-main(400, 16px, 20px);
+    font-family: "Arial", "Oswald", sans-serif;
+  }
+}
+
+.catalog-extra__cost {
+  @media (min-width: @tablet-width) {
+    margin-left: 49px;
+  }
+}
+
 .catalog-extra__paragraph-container {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    width: 225px;
+    justify-content: right;
+    margin-top: 3px;
+    min-width: 225px;
   }
 
   @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    min-width: 288px;
     margin: 0;
-    margin-right: 40px;
+    margin-top: 6px;
+    margin-right: 38px;
   }
 }
 
 .catalog-extra__title-container {
-  .border-bottom();
+  // .border-bottom();
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -42,25 +60,34 @@
 
 .catalog-extra__list {
   .site-list();
-  margin: 0 20px 35px;
+  margin: 0 20px 33px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 30px 69px;
+    margin: 0 29px 68px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 58px;
     margin-left: 110px;
     margin-right: 80px;
   }
 }
 
 .catalog-extra__item {
+  box-sizing: border-box;
+  min-width: 632px;
+  min-height: 130px;
   .site-list-item();
-  padding-top: 13px;
+  padding-top: 12px;
   padding-bottom: 19px;
   .border-bottom();
 
+  &:first-child {
+    border-top: 1px solid #ebebeb;
+  }
+
   @media (min-width: @tablet-width) {
+    min-height: 139px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -78,6 +105,7 @@
     align-items: center;
     padding: 15px 0;
     width: 895px;
+    min-height: 72px;
     border-left: none;
     border-right: none;
   }
@@ -87,7 +115,7 @@
   display: block;
   max-width: 226px;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 37px;
   padding: 0 20px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -121,7 +149,7 @@
 
   @media (min-width: @tablet-width) {
     .font-upper(400, 20px, 20px);
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -133,12 +161,15 @@
 
 .catalog-extra__button {
   margin: 0;
+  letter-spacing: 1px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
+    letter-spacing: 0.5px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: -1px;
     font-size: 16px;
     width: 244px;
   }
@@ -164,6 +195,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 30px 76px;
+    margin-left: 31px;
     width: 707px;
     height: 200px;
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/extra-gift@2x.jpg");
@@ -178,6 +210,7 @@
 
   @media (min-width: @desktop-width) {
     margin-left: 0;
+    margin-bottom: 86px;
     margin-right: 110px;
     width: 245px;
     height: 289px;

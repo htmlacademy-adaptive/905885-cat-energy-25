@@ -35,14 +35,22 @@
 }
 
 .about-cat__form-button {
+  margin-left: 21px;
+  letter-spacing: 1px;
+
   @media (min-width: @tablet-width) {
     margin: 0;
     margin-right: 61px;
+    margin-left: 1px;
+    min-width: 282px;
     height: 52px;
-    font-size: 16px;
+    font-size: 20px;
+    letter-spacing: 0.2px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 41px;
+    margin-right: 81px;
     width: 568px;
   }
 }
@@ -50,20 +58,31 @@
 .about-cat__form-application {
   @media (min-width: @tablet-width) {
     margin-left: 70px;
-    margin-bottom: 72px;
+    margin-bottom: 61px;
     display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
   }
 }
 
 .about-cat__form-required-text {
   display: block;
   width: 157px;
-  margin: 21px auto 32px;
+  margin: 20px auto 31px;
+  font-family: "Arial", "Oswald", sans-serif;
 
   @media (min-width: @tablet-width) {
+    margin-left: 0;
+    margin-top: 16px;
     width: 180px;
     .font-main(400, 16px, 16px);
     font-family: "Arial", "Oswald", sans-serif;
     columns: #000000;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 18px;
   }
 }

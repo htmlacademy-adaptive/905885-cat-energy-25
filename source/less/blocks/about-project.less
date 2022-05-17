@@ -1,16 +1,17 @@
 .about-project {
+  min-width: 280px;
   margin: 0 20px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 0 30px;
+    padding: 0;
     margin-bottom: 43px;
     .border-bottom;
   }
 
   @media (min-width: @desktop-width) {
     border: none;
-    margin-bottom: 69px;
+    margin-bottom: 0;
     padding: 0;
   }
 }
@@ -21,12 +22,14 @@
   counter-reset: program;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 9px;
     width: 633px;
     display: flex;
     flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 0;
     width: 1220px;
     flex-direction: row;
     justify-content: left;
@@ -34,6 +37,7 @@
 }
 
 .about-project__item {
+  min-width: 280px;
   .site-list-item();
   position: relative;
   display: flex;
@@ -41,7 +45,7 @@
   counter-increment: program;
 
   &:not(:last-child) {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 
   &--leaf {
@@ -97,6 +101,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    min-width: 230px;
     box-sizing: border-box;
     padding: 151px 0 57px;
     max-width: 249px;
@@ -104,7 +109,7 @@
     flex-direction: column;
 
     &:nth-child(2n) {
-      margin-left: 137px;
+      margin-left: 139px;
     }
 
     &:not(:last-child) {
@@ -177,7 +182,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 37px;
+      margin-bottom: 26px;
     }
 
     &--leaf {
@@ -187,6 +192,11 @@
         width: 80px;
         height: 80px;
       }
+
+      &::after {
+        top: 0;
+        right: 5px;
+      }
     }
 
     &--powder {
@@ -195,6 +205,11 @@
         top: 40px;
         width: 80px;
         height: 80px;
+      }
+
+      &::after {
+        top: 0;
+        right: -14px;
       }
     }
 
@@ -206,6 +221,11 @@
         width: 80px;
         height: 80px;
       }
+
+      &::after {
+        top: 0;
+        right: -16px;
+      }
     }
 
     &--clock {
@@ -216,13 +236,18 @@
         width: 80px;
         height: 80px;
       }
+
+      &::after {
+        top: 0;
+        right: -18px;
+      }
     }
   }
 }
 
 .about-project__title {
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   .font-main(400, 36px, 40px);
 
   @media (min-width: @tablet-width) {
@@ -233,22 +258,32 @@
 
 .about-project__paragraph {
   margin: 0;
+  margin-top: 2px;
   margin-left: 80px;
   .font-main(400, 14px, 18px);
   font-family: "Arial", "Oswald", sans-serif;
   color: #444444;
+
+  & br {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0;
     max-width: 245px;
     .font-main(400, 16px, 24px);
     font-family: "Arial", "Oswald", sans-serif;
+
+    & br {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
     margin: 0;
-    min-width: 201px;
+    margin-top: 1px;
+    min-width: 245px;
     max-width: 245px;
   }
 }
