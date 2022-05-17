@@ -1,6 +1,7 @@
 .living-example {
+  min-width: 280px;
   padding: 25px 20px;
-  padding-bottom: 44px;
+  padding-bottom: 40px;
   background-color: #eaeaea;
 
   @media (min-width: @tablet-width) {
@@ -12,6 +13,7 @@
     position: relative;
     width: 1440px;
     margin-left: -110px;
+    padding-bottom: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,7 +31,12 @@
 }
 
 .living-example__text-container {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
+  }
+
   @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
     margin-left: 110px;
   }
 }
@@ -40,7 +47,6 @@
   .font-main(400, 36px, 40px);
 
   @media (min-width: @tablet-width) {
-    margin-left: 30px;
     margin-bottom: 63px;
     .font-main(400, 60px, 60px);
   }
@@ -48,8 +54,8 @@
   @media (min-width: @desktop-width) {
     position: relative;
     margin: 0;
-    margin-top: 40px;
-    margin-bottom: 146px;
+    margin-top: 43px;
+    margin-bottom: 148px;
   }
 }
 
@@ -62,6 +68,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 30px;
+    margin-left: 0;
     width: 700px;
     margin-bottom: 54px;
     .font-main(400, 16px, 24px);
@@ -72,14 +79,14 @@
     width: 436px;
     height: 96px;
     margin: 0;
-    margin-bottom: 69px;
+    margin-bottom: 67px;
   }
 }
 
 .living-example__result-tablet {
   @media (min-width: @tablet-width) {
     position: relative;
-    margin: 0 30px;
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -102,7 +109,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 60px;
+    margin-bottom: 57px;
     justify-content: left;
   }
 }
@@ -120,8 +127,9 @@
 .living-example__result-number {
   display: flex;
   margin: 0;
-  width: 124px;
-  height: 56px;
+  width: 122px;
+  height: 50px;
+  padding-bottom: 4px;
   .font-upper(400, 24px, 24px);
   align-items: center;
   justify-content: center;
@@ -129,16 +137,17 @@
   border-radius: 3px;
 
   @media (min-width: @tablet-width) {
-    width: 162px;
-    height: 72px;
+    padding-bottom: 3px;
+    width: 160px;
+    height: 67px;
     .font-upper(400, 30px, 37px);
   }
 }
 
 .living-example__result-description {
   position: absolute;
-  left: 20%;
-  top: 50px;
+  left: 18%;
+  top: 46px;
   display: flex;
   max-width: 77px;
   text-align: center;
@@ -180,20 +189,25 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    margin-top: 8px;
     display: block;
     width: 174px;
     text-align: right;
     .font-upper(400, 20px, 20px);
+    line-height: 28px;
+    letter-spacing: 0.1px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 0;
     width: 330px;
+    text-align: left;
   }
 }
 
 .living-example__expenses-desktop {
   @media (min-width: @desktop-width) {
-    margin-left: 63px;
+    margin-left: 59px;
   }
 }
 
@@ -204,6 +218,11 @@
     width: 592px;
     height: 511px;
     margin-bottom: 28px;
+    margin-left: 89px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 89px;
   }
 }
 
@@ -225,7 +244,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 117px;
+    margin-right: 21px;
     background-color: #f2f2f2;
 
     &::before {
@@ -247,14 +266,17 @@
 }
 
 .living-example__slider {
+  margin-top: -8px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    margin-top: 30px;
     padding: 0 44px;
-    padding-bottom: 58px;
+    padding-left: 47px;
+    padding-bottom: 60px;
     justify-content: center;
   }
 
@@ -275,10 +297,10 @@
 
 .living-example__slider-container {
   display: flex;
-  margin: 0 13px;
-  padding: 4px 6px;
-  width: 86px;
-  height: 6px;
+  margin: 0 17px;
+  padding: 2px 6px;
+  width: 72px;
+  height: 8px;
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
   border-radius: 6px;
@@ -299,7 +321,7 @@
 .living-example__slider-button {
   display: flex;
   box-sizing: border-box;
-  width: 35px;
+  width: 36px;
   height: 6px;
   align-self: center;
   border: none;
@@ -310,11 +332,17 @@
 
 .living-example__slider-text {
   margin: 0;
-  .font-upper(400, 20px, 30px);
+  padding: 0;
+  .font-upper(400, 16px, 20px);
   display: flex;
+  height: 30px;
   align-items: center;
   text-align: center;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .living-example__slider-line {
@@ -329,6 +357,10 @@
     background-color: #dcdcdc;
     border-radius: 6px;
   }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 24px;
+  }
 }
 
 .living-example__slider-control {
@@ -337,7 +369,7 @@
   @media (min-width: @tablet-width) {
     display: block;
     position: absolute;
-    top: -12px;
+    top: -14px;
     left: 174px;
     margin: 0 23px;
     width: 34px;

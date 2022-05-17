@@ -21,13 +21,13 @@
 
 .form-extra__list {
   .site-list();
-  margin-bottom: 34px;
+  margin-bottom: 40px;
   margin-left: 20px;
 
   @media (min-width: @tablet-width) {
     margin-left: 70px;
-    margin-bottom: 54px;
-    width: 565px;
+    margin-bottom: 22px;
+    max-width: 565px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -37,8 +37,8 @@
   @media (min-width: @desktop-width) {
     margin-left: 110px;
     margin-right: 110px;
-    margin-bottom: 61px;
-    width: 1124px;
+    margin-bottom: 29px;
+    max-width: 1196px;
   }
 }
 
@@ -46,14 +46,20 @@
   .site-list-item();
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 
   @media (min-width: @tablet-width) {
     width: 220px;
 
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 37px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:not(:last-child) {
+      margin-right: 104px;
     }
   }
 }
