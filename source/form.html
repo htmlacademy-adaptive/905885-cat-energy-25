@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat energy | Подбор программы</title>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
@@ -16,17 +17,14 @@
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__panel">
           <a class="main-header__link logo" href="index.html">
-            <svg class="main-header__logo--visible-mobile" width="34" height="38">
-              <use xlink:href="img/sprite.svg#logo-mobile"></use>
-            </svg>
-            <svg class="main-header__logo--visible-tablet" width="34" height="38">
-              <use xlink:href="img/sprite.svg#logo-tablet"></use>
-            </svg>
-            <svg class="main-header__logo--visible-desktop" width="34" height="38">
-              <use xlink:href="img/sprite.svg#logo-desktop"></use>
-            </svg>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="main-header__image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy">
+            </picture>
           </a>
           <a class="main-header__link-text logo" href="index.html">
+            <span class="visually-hidden">логотип Cat energy.</span>
             <svg width="101" height="18">
               <use xlink:href="img/sprite.svg#logo-text"></use>
             </svg>
@@ -83,22 +81,22 @@
             <h3 class="visually-hidden">Цель питания</h3>
             <ul class="program-type__list">
               <li class="program-type__item">
-                <label class="program-type__label" for="program-type__loss">
-                  <input class="visually-hidden program-type__input" type="radio" name="program-type" id="program-type__loss" value="weight-loss" checked>
+                <label class="program-type__label" for="program-type__loss" tabindex="0">
+                  <input class="visually-hidden program-type__input" type="radio" name="program-type" id="program-type__loss" value="weight-loss" checked tabindex="-1">
                   <span class="control-mark"></span>
                   <span class="program-type__text form-text">Похудение</span>
                 </label>
               </li>
               <li class="program-type__item">
-                <label class="program-type__label" for="program-type__gain">
-                  <input class="visually-hidden program-type__input" type="radio" name="program-type" id="program-type__gain" value="weight-gain">
+                <label class="program-type__label" for="program-type__gain" tabindex="0">
+                  <input class="visually-hidden program-type__input" type="radio" name="program-type" id="program-type__gain" value="weight-gain" tabindex="-1">
                   <span class="control-mark"></span>
                   <span class="program-type__text form-text">Набор массы</span>
                 </label>
               </li>
               <li class="program-type__item">
-                <label class="program-type__label" for="program-type__need-help">
-                  <input class="visually-hidden program-type__input" type="radio" name="program-type" id="program-type__need-help" value="need-help">
+                <label class="program-type__label" for="program-type__need-help" tabindex="0">
+                  <input class="visually-hidden program-type__input" type="radio" name="program-type" id="program-type__need-help" value="need-help" tabindex="-1">
                   <span class="control-mark"></span>
                   <span class="program-type__text form-text">Не знаю (нужен ваш совет)</span>
                 </label>
@@ -139,29 +137,29 @@
             </div>
             <ul class="form-extra__list">
               <li class="form-extra__item">
-                <label class="form-extra__label" for="extra__sugar">
-                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__sugar" value="sweetener" checked>
+                <label class="form-extra__label" for="extra__sugar" tabindex="0">
+                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__sugar" value="sweetener" checked tabindex="-1">
                   <span class="control-mark"></span>
                   <span class="form-extra__text form-text">сахарозаменитель</span>
                 </label>
               </li>
               <li class="form-extra__item">
-                <label class="form-extra__label" for="extra__water">
-                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__water" value="water">
+                <label class="form-extra__label" for="extra__water" tabindex="0">
+                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__water" value="water" tabindex="-1">
                   <span class="control-mark"></span>
                   <span class="form-extra__text form-text">питьевая вода</span>
                 </label>
               </li>
               <li class="form-extra__item">
-                <label class="form-extra__label" for="extra__milk">
-                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__milk" value="milk">
+                <label class="form-extra__label" for="extra__milk" tabindex="0">
+                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__milk" value="milk" tabindex="-1">
                   <span class="control-mark"></span>
                   <span class="form-extra__text form-text">молоко</span>
                 </label>
               </li>
               <li class="form-extra__item">
-                <label class="form-extra__label" for="extra__vitamins">
-                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__vitamins" value="vitamins">
+                <label class="form-extra__label" for="extra__vitamins" tabindex="0">
+                  <input class="visually-hidden form-extra__input" type="checkbox" name="extra" id="extra__vitamins" value="vitamins" tabindex="-1">
                   <span class="control-mark"></span>
                   <span class="form-extra__text form-text">витамины</span>
                 </label>
@@ -203,6 +201,7 @@
       <div class="main-footer__container">
         <div class="main-footer__logo-container">
           <a class="main-footer__logo logo" href="index.html">
+            <span class="visually-hidden">логотип Cat energy.</span>
             <svg class="main-footer__logo-text" width="128" height="24">
               <use xlink:href="img/sprite.svg#footer-logo"></use>
             </svg>

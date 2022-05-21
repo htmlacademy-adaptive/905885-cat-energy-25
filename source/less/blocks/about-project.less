@@ -103,9 +103,9 @@
   @media (min-width: @tablet-width) {
     min-width: 230px;
     box-sizing: border-box;
-    padding: 151px 0 57px;
+    padding: 152px 0 56px;
     max-width: 249px;
-    height: 280px;
+    min-height: 280px;
     flex-direction: column;
 
     &:nth-child(2n) {
@@ -132,6 +132,10 @@
         top: 40px;
         width: 80px;
         height: 80px;
+      }
+
+      &::after {
+        right: 20px;
       }
     }
 
@@ -182,7 +186,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 26px;
+      margin-bottom: 25px;
     }
 
     &--leaf {
@@ -286,9 +290,4 @@
     min-width: 245px;
     max-width: 245px;
   }
-}
-
-.living-example__image {
-  display: block;
-  margin: 0 auto;
 }

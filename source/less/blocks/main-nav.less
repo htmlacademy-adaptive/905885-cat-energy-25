@@ -111,8 +111,15 @@
 
 .main-nav--nojs .main-nav__list {
   @media (max-width: @mobile-width-only) {
+    display: block;
     margin-top: 0;
     position: relative;
+  }
+}
+
+.main-nav--nojs .main-header__link-text {
+  @media (max-width: @mobile-width-only) {
+    margin-right: 20px;
   }
 }
 
@@ -132,13 +139,13 @@
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
     padding: 0;
-    height: 24px;
+    min-height: 24px;
     border: none;
 
     &--current {
       margin-top: 10px;
-      height: 34px;
-      padding-bottom: 10px;
+      min-height: 34px;
+      padding-bottom: 8px;
       border-bottom: 2px solid #68b738;
     }
   }
@@ -148,8 +155,8 @@
 
     &--current {
       margin-top: 11px;
-      height: 39px;
-      padding-bottom: 20px;
+      min-height: 38px;
+      padding-bottom: 10px;
       border-bottom: 2px solid @main-background-color;
     }
 
@@ -167,6 +174,14 @@
   .font-upper(500, 20px, 20px);
   letter-spacing: 0.7px;
   color: #000000;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     display: block;
