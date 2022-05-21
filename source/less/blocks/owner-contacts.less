@@ -12,7 +12,7 @@
   .site-list();
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     margin-left: 71px;
@@ -65,6 +65,10 @@
 .owner-contacts__phone {
   @media (min-width: @tablet-width) {
     margin-left: -3px;
+
+    & .owner-contacts__input {
+      padding-left: 20px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -73,12 +77,13 @@
 }
 
 .owner-contacts__input {
+  padding-left: 13px;
   position: relative;
 
   &[type="email"] + .owner-contacts__input-icon {
     content: "";
     position: absolute;
-    top: 17px;
+    top: 16px;
     right: 16px;
     width: 19px;
     height: 15px;

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat energy | Главная</title>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
@@ -15,18 +16,15 @@
     <header class="main-header main-header--background">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__panel">
-          <a class="main-header__link logo" href="#">
-            <svg class="main-header__logo--visible-mobile" width="34" height="38">
-              <use href="img/sprite.svg#logo-mobile"></use>
-            </svg>
-            <svg class="main-header__logo--visible-tablet" width="34" height="38">
-              <use xlink:href="img/sprite.svg#logo-tablet"></use>
-            </svg>
-            <svg class="main-header__logo--visible-desktop" width="34" height="38">
-              <use href="img/sprite.svg#logo-desktop"></use>
-            </svg>
+          <a class="main-header__link logo">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="main-header__image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy.">
+            </picture>
           </a>
-          <a class="main-header__link-text logo" href="#">
+          <a class="main-header__link-text logo">
+            <span class="visually-hidden">логотип Cat energy.</span>
             <svg width="101" height="18">
               <use xlink:href="img/sprite.svg#logo-text"></use>
             </svg>
@@ -110,7 +108,7 @@
               <p class="about-project__paragraph">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
             <li class="about-project__item about-project__item--clock">
-              <p class="about-project__paragraph">Уже через месяц наслаждайтесь изменениями к лучшему<br>&nbsp;вашего питомца!</p>
+              <p class="about-project__paragraph">Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br>вашего питомца!</p>
             </li>
           </ul>
       </section>
@@ -148,7 +146,7 @@
                 <button class="living-example__slider-button" type="button"></button>
               </div>
               <div class="living-example__slider-line">
-                <button class="living-example__slider-control"></button>
+                <button class="living-example__slider-control"><span class="visually-hidden">Слайдер переключения котов.</span></button>
               </div>
               <input class="visually-hidden living-example__input" type="range" name="living-example__slider" id="living-example__slider" min="0" max="2" value="1">
               <p class="living-example__slider-text">Стало</p>
@@ -183,7 +181,8 @@
     <footer class="main-footer">
       <div class="main-footer__container">
         <div class="main-footer__logo-container">
-          <a class="main-footer__logo" href="#">
+          <a class="main-footer__logo">
+            <span class="visually-hidden">логотип Cat energy.</span>
             <svg class="main-footer__logo-text" width="128" height="24">
               <use xlink:href="img/sprite.svg#footer-logo"></use>
             </svg>

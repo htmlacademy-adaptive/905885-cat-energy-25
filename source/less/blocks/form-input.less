@@ -3,11 +3,19 @@
   flex-grow: 1;
   min-width: 172px;
   height: 45px;
-  padding-left: 15px;
+  padding-left: 17px;
   border: 1px solid #e7e7e7;
   box-sizing: border-box;
   .font-upper(400, 16px, 18px);
   color: #444444;
+
+  &:active {
+    outline: 2px solid #444444;
+  }
+
+  &:focus:invalid {
+    outline: 2px solid #ff8282;
+  }
 
   @media (min-width: @tablet-width) {
     height: 52px;

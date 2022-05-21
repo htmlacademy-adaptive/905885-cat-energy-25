@@ -13,7 +13,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 0;
-    margin-bottom: 41px;
+    margin-bottom: 70px;
   }
 }
 
@@ -60,7 +60,7 @@
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
     width: 708px;
-    height: 372px;
+    min-height: 372px;
     padding: 77px 316px 0 52px;
 
     &:not(:last-child) {
@@ -92,8 +92,12 @@
 
   @media (min-width: @desktop-width) {
     width: 570px;
-    height: 374px;
+    min-height: 374px;
     padding: 77px 51px 59px 52px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
 
     &--loss {
       &::after {
@@ -126,7 +130,8 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    margin-bottom: 24px;
+    margin-left: 1px;
+    margin-bottom: 25px;
     .font-upper(400, 36px, 36px);
     text-align: left;
   }
@@ -150,7 +155,7 @@
     width: 340px;
     padding: 0;
     margin: 0;
-    margin-bottom: 52px;
+    margin-bottom: 51px;
     .font-main(400, 16px, 24px);
     font-family: "Arial", "Oswald", sans-serif;
     color: #000000;
@@ -165,6 +170,7 @@
 }
 
 .program-cards__link {
+  display: block;
   margin-left: 19px;
   margin-bottom: 21px;
   .font-upper(400, 16px, 16px);
@@ -181,6 +187,10 @@
     .font-upper(400, 20px, 30px);
     text-align: left;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .program-cards__link-image {
@@ -188,8 +198,8 @@
   margin-left: 13px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 29px;
+    margin-left: 26.5px;
     position: absolute;
-    top: 8px;
+    top: 9px;
   }
 }
