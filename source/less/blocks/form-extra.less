@@ -10,6 +10,7 @@
 
 .form-extra__title {
   margin-bottom: 35px;
+  min-width: 141px;
   max-width: 141px;
 
   @media (min-width: @tablet-width) {
@@ -84,9 +85,35 @@
   margin: 0;
   margin-right: 16px;
 
+  &:focus + .control-mark {
+    outline: 1px #222222 solid;
+  }
+
+  &:checked + .control-mark::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 14px;
+    top: 7px;
+    left: 5px;
+    background-image: url("../img/checkbox-marker.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
+
+    &:focus:checked + .control-mark::before {
+      width: 25px;
+      height: 19px;
+      top: 10px;
+      left: 7px;
+      background-image: url("../img/checkbox-marker.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -101,10 +128,4 @@
     margin-left: 59px;
     .font-upper(400, 20px, 30px);
   }
-}
-
-.about-cat__form__required-text {
-  margin: 0 auto;
-  margin-bottom: 32px;
-  margin-top: 21px;
 }

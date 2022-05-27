@@ -29,6 +29,7 @@
 }
 
 .program-type__item {
+  min-width: 280px;
   .site-list-item();
 
   &:not(:last-child) {
@@ -69,6 +70,21 @@
   margin-right: 15px;
   width: 30px;
   height: 30px;
+
+  &:focus + .control-mark {
+    outline: 1px #222222 solid;
+  }
+
+  &:checked + .control-mark::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 13.5px;
+    height: 13.5px;
+    background-color: @main-background-color;
+    border-radius: 50%;
+  }
 
   @media (min-width: @tablet-width) {
     width: 40px;

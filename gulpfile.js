@@ -12,6 +12,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
+import inject from 'gulp-inject';
 
 // Styles
 
@@ -31,7 +32,13 @@ export const styles = () => {
 // HTML
 
 const html = () => {
+
+  function fileContents(filePath, file) {
+    return file.contents.toString();
+  }
+
   return gulp.src('source/*.html')
+    .pipe(inject(gulp.src('build/img/sprite.svg'), { transform: fileContents }))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
@@ -39,7 +46,7 @@ const html = () => {
 // Scripts
 
 const scripts = () => {
-  return gulp.src('source/js/script.js')
+  return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
@@ -71,7 +78,7 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg', '!source/img/sprites.svg'])
+  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
@@ -85,16 +92,14 @@ const sprite = () => {
     .pipe(gulp.dest('build/img'));
 }
 
-// Copy
-
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
-    ], {
+  ], {
     base: 'source'
-    })
-  .pipe(gulp.dest('build'))
+  })
+    .pipe(gulp.dest('build'))
   done();
 }
 
@@ -108,12 +113,12 @@ const clean = () => {
 
 const server = (done) => {
   browser.init({
-  server: {
-  baseDir: 'build'
-  },
-  cors: true,
-  notify: false,
-  ui: false,
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
   });
   done();
 }
@@ -133,37 +138,29 @@ const watcher = () => {
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
-// Build
+const prepareSvgs = gulp.series(
+  svg,
+  sprite,
+);
 
 export const build = gulp.series(
-clean,
-copy,
-optimizeImages,
-gulp.parallel(
-styles,
-html,
-scripts,
-svg,
-sprite,
-createWebp
-),
+  clean,
+  copy,
+  optimizeImages,
+  prepareSvgs,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    createWebp
+  ),
 );
 
 // Default
 
 export default gulp.series(
-clean,
-copy,
-copyImages,
-gulp.parallel(
-styles,
-html,
-scripts,
-svg,
-sprite,
-createWebp
-),
-gulp.series(
-server,
-watcher
-));
+  build,
+  gulp.series(
+    server,
+    watcher
+  ));

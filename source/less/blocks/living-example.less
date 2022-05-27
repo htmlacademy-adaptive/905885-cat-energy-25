@@ -11,8 +11,7 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
-    width: 1440px;
-    margin-left: -110px;
+    min-width: 1440px;
     padding-bottom: 6px;
     display: flex;
     flex-direction: row;
@@ -42,37 +41,38 @@
 }
 
 .living-example__title {
-  margin: 0;
+  max-width: 280px;
+  margin: 0 auto;
   margin-bottom: 40px;
   .font-main(400, 36px, 40px);
 
   @media (min-width: @tablet-width) {
+    max-width: 708px;
     margin-bottom: 64px;
     .font-main(400, 60px, 60px);
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
-    margin: 0;
     margin-top: 43px;
     margin-bottom: 147px;
   }
 }
 
 .living-example__description {
-  margin: 0;
+  max-width: 280px;
+  margin: 0 auto;
   margin-bottom: 20px;
   .font-main(400, 14px, 18px);
-  font-family: "Arial", "Oswald", sans-serif;
+  font-family: "Arial", "Verdana", sans-serif;
   color: #444444;
 
   @media (min-width: @tablet-width) {
-    margin: 30px;
-    margin-left: 0;
-    width: 700px;
+    max-width: 702px;
+    padding-right: 6px;
     margin-bottom: 53px;
     .font-main(400, 16px, 24px);
-    font-family: "Arial", "Oswald", sans-serif;
+    font-family: "Arial", "Verdana", sans-serif;
   }
 
   @media (min-width: @desktop-width) {
@@ -84,9 +84,12 @@
 }
 
 .living-example__result-tablet {
+  max-width: 280px;
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
+    max-width: 708px;
     position: relative;
-    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -153,7 +156,7 @@
   text-align: center;
   align-items: center;
   .font-main(400, 12px, 12px);
-  font-family: "Arial", "Oswald", sans-serif;
+  font-family: "Arial", "Verdana", sans-serif;
   color: #444444;
   background-color: #eaeaea;
 
@@ -167,7 +170,7 @@
     text-align: center;
     background-color: #ffffff;
     .font-main(400, 14px, 14px);
-    font-family: "Arial", "Oswald", sans-serif;
+    font-family: "Arial", "Verdana", sans-serif;
     color: #c4c4c4;
 
     &--time {
@@ -220,7 +223,7 @@
     width: 592px;
     height: 511px;
     margin-bottom: 28px;
-    margin-left: 89px;
+    // margin-left: 89px;
   }
 
   @media (min-width: @desktop-width) {
@@ -231,8 +234,7 @@
 .living-example__cats-slider {
   @media (min-width: @tablet-width) {
     position: relative;
-    width: 768px;
-    margin-left: -30px;
+    min-width: 768px;
     background-color: #eaeaea;
 
     &::before {
@@ -342,6 +344,16 @@
   align-items: center;
   text-align: center;
   color: #000000;
+  border: none;
+  background: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

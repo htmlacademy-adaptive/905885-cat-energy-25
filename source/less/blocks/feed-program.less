@@ -1,9 +1,11 @@
 .feed-program {
   min-width: 320px;
   background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/feed-program-background.jpg");
-  background-size: 320px 302px;
+  background-size: auto 302px;
+  background-position: top center;
   background-repeat: no-repeat;
   padding-top: 27px;
+  margin: 0 auto;
 
   @media (min-resolution: 2dppx) {
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/feed-program-background@2x.jpg");
@@ -16,8 +18,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 1440px;
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
     margin-bottom: 82px;
   }
 }
@@ -31,9 +35,8 @@
   color: #ffffff;
 
   @media (min-width: @tablet-width) {
-    margin: 0 auto;
-    margin-left: 87px;
     margin-bottom: 41px;
+    margin-left: 87px;
     max-width: 420px;
     min-height: 120px;
     text-align: left;
@@ -42,12 +45,14 @@
   }
 
   @media (min-width: @desktop-width) {
+    max-height: 60px;
+    margin-left: 0;
     margin-top: 82px;
-    margin-left: 80px;
   }
 }
 
 .feed-program__description {
+  margin: 0;
   margin-bottom: 29px;
   .font-upper(400, 14px, 14px);
   color: #ffffff;
@@ -57,23 +62,46 @@
     display: block;
     margin: 0;
     margin-bottom: 20px;
+    margin-left: 87px;
     width: 283px;
-    margin-left: 89px;
     .font-upper(400, 20px, 20px);
     color: #000000;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 80px;
+    margin-left: 0;
+  }
+}
+
+.feed-program__text-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    margin: 0 auto;
+    max-width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1008px;
+    margin-left: 190px;
+    margin-right: 0;
   }
 }
 
 .feed-program__image {
-  margin: 0 20px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 0;
     display: block;
-    margin: 0;
     width: 709px;
     height: 609px;
   }
@@ -85,24 +113,30 @@
     height: 499px;
     margin: 0;
     margin-bottom: 54px;
+    order: 2;
   }
 }
 
 .feed-program__link {
+  margin: 0 auto;
   margin-bottom: 20px;
+
+  @media (max-width: @mobile-width-only) {
+    order: 4;
+  }
 
   @media (min-width: @tablet-width) {
     width: 244px;
     height: 54px;
     position: absolute;
     top: 230px;
-    left: 70px;
+    left: 90px;
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: @desktop-width) {
     top: 314px;
-    left: 60px;
+    left: 0;
   }
 }

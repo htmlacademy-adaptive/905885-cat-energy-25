@@ -45,6 +45,7 @@
 }
 
 .owner-contacts__title {
+  min-width: 200px;
   padding-right: 2px;
   margin-bottom: 35px;
 
@@ -76,8 +77,18 @@
   }
 }
 
+.owner-contacts__input-mail {
+  stroke: #222222;
+  fill: #ffffff;
+}
+
+.owner-contacts__input-phone {
+  fill: #000000;
+}
+
 .owner-contacts__input {
   padding-left: 13px;
+  padding-right: 44px;
   position: relative;
 
   &[type="email"] + .owner-contacts__input-icon {
@@ -87,8 +98,6 @@
     right: 16px;
     width: 19px;
     height: 15px;
-    background-image: url("../img/input-mail.svg");
-    background-repeat: no-repeat;
   }
 
   &[type="tel"] + .owner-contacts__input-icon {
@@ -98,12 +107,26 @@
     right: 13px;
     width: 20px;
     height: 20px;
-    background-image: url("../img/input-phone.svg");
-    background-repeat: no-repeat;
+  }
+
+  &:focus + .owner-contacts__input-mail {
+    stroke: #68b738;
+  }
+
+  &:focus:invalid + .owner-contacts__input-mail {
+    stroke: #ff8282;
+  }
+
+  &:focus + .owner-contacts__input-phone {
+    fill: #68b738;
+  }
+
+  &:focus:invalid + .owner-contacts__input-phone {
+    fill: #ff8282;
   }
 
   @media (min-width: @tablet-width) {
-    &&[type="email"] {
+    &[type="email"] {
       padding-left: 23px;
     }
 
