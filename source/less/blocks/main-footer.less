@@ -39,6 +39,14 @@
 .main-footer__logo {
   margin: auto;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 8px;
   }
@@ -86,7 +94,7 @@
   display: flex;
 
   .font-main(400, 16px, 18px);
-  font-family: "Arial", "Oswald", sans-serif;
+  font-family: "Arial", "Verdana", sans-serif;
 
   & .social__image {
     fill: #666666;
@@ -105,7 +113,7 @@
   display: flex;
   justify-content: space-between;
   .font-main(400, 16px, 18px);
-  font-family: "Arial", "Oswald", sans-serif;
+  font-family: "Arial", "Verdana", sans-serif;
   color: #444444;
 
   & .main-footer__html-logo {

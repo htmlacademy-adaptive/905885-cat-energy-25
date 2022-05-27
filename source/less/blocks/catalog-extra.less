@@ -6,6 +6,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -67,6 +69,7 @@
 .catalog-extra__item {
   box-sizing: border-box;
   min-height: 130px;
+  min-width: 280px;
   .site-list-item();
   padding-top: 13px;
   padding-bottom: 19px;
@@ -104,6 +107,7 @@
 
 .catalog-extra__title {
   display: block;
+  min-width: 226px;
   max-width: 226px;
   margin: 0;
   margin-bottom: 35px;
@@ -156,6 +160,7 @@
 }
 
 .catalog-extra__button {
+  width: 100%;
   margin: 0;
   letter-spacing: 1px;
 
@@ -172,14 +177,13 @@
 }
 
 .catalog-extra__gift {
-  margin: 0 20px 35px;
+  margin: 0 auto 35px;
   position: relative;
-  width: 280px;
+  max-width: 280px;
   min-height: 290px;
   background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/extra-gift.jpg");
   background-color: rgba(104, 183, 56, 0.85);
   background-repeat: no-repeat;
-  background-size: cover;
 
   &::before {
     content: "";
@@ -192,9 +196,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin: 0 30px 76px;
-    margin-left: 31px;
-    width: 707px;
+    margin: 0 auto 76px;
+    min-width: 707px;
     min-height: 200px;
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/extra-gift@2x.jpg");
     background-size: cover;
@@ -210,7 +213,7 @@
     margin-left: 0;
     margin-bottom: 86px;
     margin-right: 110px;
-    width: 245px;
+    min-width: 245px;
     height: 289px;
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/extra-gift-desktop.jpg");
 
@@ -226,14 +229,14 @@
   width: 161px;
   text-align: center;
   .font-main(400, 16px, 20px);
-  font-family: "Arial", "Oswald", sans-serif;
+  font-family: "Arial", "Verdana", sans-serif;
   color: #ffffff;
 
   @media (min-width: @tablet-width) {
     padding: 71px 124px 69px 422px;
     text-align: left;
     .font-main(400, 16px, 20px);
-    font-family: "Arial", "Oswald", sans-serif;
+    font-family: "Arial", "Verdana", sans-serif;
   }
 
   @media (min-width: @desktop-width) {
