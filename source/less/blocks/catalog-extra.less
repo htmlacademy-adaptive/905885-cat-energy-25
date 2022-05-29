@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 1440px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -21,6 +21,8 @@
 }
 
 .catalog-extra__paragraph-container {
+  margin: 0 auto;
+  max-width: 280px;
   margin-bottom: 14px;
   display: flex;
   flex-direction: row;
@@ -28,6 +30,7 @@
 
   @media (min-width: @tablet-width) {
     justify-content: right;
+    margin: 0;
     margin-top: 3px;
     min-width: 225px;
   }
@@ -47,21 +50,23 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 100%;
     flex-grow: 1;
   }
 }
 
 .catalog-extra__list {
   .site-list();
-  margin: 0 20px 34px;
+  margin: 0 0 34px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 29px 68px;
+    margin: 0 0 68px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 895px;
     margin-bottom: 58px;
-    margin-left: 110px;
+    margin-left: auto;
     margin-right: 80px;
   }
 }
@@ -80,7 +85,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-width: 632px;
+    max-width: 710px;
+    margin: 0 auto;
     min-height: 139px;
     display: flex;
     flex-direction: row;
@@ -95,10 +101,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 0;
-    width: 895px;
+    max-width: 895px;
     min-height: 72px;
     border-left: none;
     border-right: none;
@@ -124,21 +130,23 @@
 
   @media (min-width: @tablet-width) {
     max-width: 340px;
-    margin-left: 30px;
+    margin-left: 0;
     padding: 0 36px;
     margin-bottom: 80px;
     .font-main(400, 36px, 36px);
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 340px;
     padding-left: 40px;
-    margin-left: 70px;
+    margin-left: 0;
+    margin-bottom: 78px;
   }
 }
 
 .catalog-extra__product-title {
-  margin: 0;
-  margin-left: 1px;
+  margin: 0 auto;
+  max-width: 280px;
   margin-bottom: 13px;
   .font-upper(400, 16px, 16px);
   text-transform: uppercase;
@@ -148,20 +156,22 @@
   @media (min-width: @tablet-width) {
     .font-upper(400, 20px, 20px);
     max-width: 632px;
+    margin: 0;
     margin-bottom: 24px;
     word-wrap: break-word;
   }
 
   @media (min-width: @desktop-width) {
+    min-width: 161px;
     min-height: 20px;
     margin: 0;
-    margin-right: auto;
+    margin-right: 163px;
   }
 }
 
 .catalog-extra__button {
-  width: 100%;
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
   letter-spacing: 1px;
 
   @media (min-width: @tablet-width) {
@@ -170,6 +180,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-right: 0;
     margin-top: -1px;
     font-size: 16px;
     width: 244px;
@@ -212,14 +223,14 @@
   @media (min-width: @desktop-width) {
     margin-left: 0;
     margin-bottom: 86px;
-    margin-right: 110px;
+    margin-right: auto;
     min-width: 245px;
     height: 289px;
     background-image: linear-gradient(to top, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/extra-gift-desktop.jpg");
 
     &::before {
-      top: 55px;
-      left: 84px;
+      top: 57px;
+      left: 85px;
     }
   }
 }
@@ -241,6 +252,6 @@
 
   @media (min-width: @desktop-width) {
     text-align: center;
-    padding: 185px 43px 42px 41px;
+    padding: 187px 43px 42px 41px;
   }
 }

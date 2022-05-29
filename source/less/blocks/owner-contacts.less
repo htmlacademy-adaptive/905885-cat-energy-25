@@ -14,16 +14,22 @@
   margin-right: 20px;
   margin-bottom: 24px;
 
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto;
+    margin-bottom: 24px;
+    max-width: 280px;
+  }
+
   @media (min-width: @tablet-width) {
-    margin-left: 71px;
+    max-width: 630px;
+    margin: 0 auto;
     margin-bottom: 65px;
-    margin-right: 65px;
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 1220px;
+    margin: 0 auto;
     margin-bottom: 47px;
-    margin-left: 110px;
-    margin-right: 110px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

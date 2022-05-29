@@ -29,6 +29,36 @@
   }
 }
 
+.living-example__container {
+  min-width: 280px;
+  background-color: #eaeaea;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding-bottom: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 179px;
+      width: 100%;
+      background-color: #ffffff;
+    }
+  }
+}
+
 .living-example__text-container {
   @media (min-width: @tablet-width) {
     margin-bottom: 28px;
@@ -36,7 +66,8 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 25px;
-    margin-left: 110px;
+    margin-left: auto;
+    margin-right: 99px;
   }
 }
 
