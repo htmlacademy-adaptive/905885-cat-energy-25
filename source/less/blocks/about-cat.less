@@ -9,30 +9,30 @@
 }
 
 .about-cat__description {
-  margin: 0 20px;
+  margin: 0 auto;
   margin-bottom: 39px;
-  min-width: 280px;
+  max-width: 280px;
   .font-upper(400, 14px, 18px);
   color: #000000;
   letter-spacing: 0.01px;
 
   @media (min-width: @tablet-width) {
-    width: 323px;
-    margin: 0;
-    margin-left: 70px;
+    max-width: 629px;
+    margin: 0 auto;
     margin-bottom: 66px;
     .font-upper(400, 20px, 30px);
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 110px;
+    max-width: 1220px;
+    margin: 0 auto;
     margin-bottom: 65px;
   }
 }
 
 .about-cat__form-button {
   margin: 0 auto;
-  width: 100%;
+  width: 280px;
   letter-spacing: 1px;
 
   @media (min-width: @tablet-width) {
@@ -46,7 +46,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 41px;
     margin-right: 82px;
     width: 568px;
   }
@@ -56,14 +55,16 @@
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
+    min-width: 629px;
     padding: 0;
-    margin-left: 70px;
+    margin: 0 auto;
     margin-bottom: 61px;
     display: flex;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 69px;
+    min-width: 1220px;
+    margin: 0 auto 69px;
   }
 }
 

@@ -33,21 +33,25 @@
   .font-upper(400, 16px, 18px);
   color: #444444;
 
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto;
+    margin-bottom: 23px;
+    max-width: 280px;
+  }
+
   @media (min-width: @tablet-width) {
-    width: 631px;
+    max-width: 631px;
     height: 174px;
     padding-top: 10px;
     padding-left: 18px;
-    margin-left: 70px;
+    margin: 0 auto;
     margin-bottom: 65px;
     font-size: 20px;
     line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 68px;
-    margin-left: 110px;
-    margin-right: 110px;
-    width: 1220px;
+    margin: 0 auto 68px;
+    min-width: 1220px;
   }
 }

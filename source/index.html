@@ -118,44 +118,46 @@
       </section>
 
       <section class="living-example">
-        <div class="living-example__text-container">
-          <h2 class="living-example__title">Живой пример</h2>
-          <p class="living-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <div class="living-example__result-tablet">
-            <div class="living-example__result">
-              <div class="living-example__results">
-                <p class="living-example__result-number">5 кг</p>
-                <b class="living-example__result-description">снижение веса</b>
+        <div class="living-example__container">
+          <div class="living-example__text-container">
+            <h2 class="living-example__title">Живой пример</h2>
+            <p class="living-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+            <div class="living-example__result-tablet">
+              <div class="living-example__result">
+                <div class="living-example__results">
+                  <p class="living-example__result-number">5 кг</p>
+                  <b class="living-example__result-description">снижение веса</b>
+                </div>
+                <div class="living-example__results">
+                  <p class="living-example__result-number">60 дней</p>
+                  <b class="living-example__result-description living-example__result-description--time">затрачено времени</b>
+                </div>
               </div>
-              <div class="living-example__results">
-                <p class="living-example__result-number">60 дней</p>
-                <b class="living-example__result-description living-example__result-description--time">затрачено времени</b>
+              <p class="living-example__expenses">Затраты на питание: <span class="living-example__expenses-desktop">15 000 РУБ.</span> </p>
+            </div>
+          </div>
+            <div class="living-example__cats-slider">
+              <div class="living-example__cats">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-before.webp 1x, img/cat-before@2x.webp 2x">
+                  <source type="image/webp" srcset="img/before-mobile.webp 1x, img/before-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x">
+                  <img class="living-example__image" id="catImage" src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" width="280" height="232" alt="кот борис до.">
+                </picture>
+              </div>
+              <div class="living-example__slider">
+                <button class="living-example__slider-text living-example__slider-text--before">Было</button>
+                <div class="living-example__slider-container living-example__slider-container--before">
+                  <button class="living-example__slider-button" type="button"></button>
+                </div>
+                <div class="living-example__slider-line">
+                  <button class="living-example__slider-control"><span class="visually-hidden">Слайдер переключения котов.</span></button>
+                </div>
+                <input class="visually-hidden living-example__input" type="range" name="living-example__slider" id="living-example__slider" min="0" max="2" value="1">
+                <button class="living-example__slider-text living-example__slider-text--after">Стало</button>
               </div>
             </div>
-            <p class="living-example__expenses">Затраты на питание: <span class="living-example__expenses-desktop">15 000 РУБ.</span> </p>
-          </div>
         </div>
-          <div class="living-example__cats-slider">
-            <div class="living-example__cats">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-before.webp 1x, img/cat-before@2x.webp 2x">
-                <source type="image/webp" srcset="img/before-mobile.webp 1x, img/before-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x">
-                <img class="living-example__image" id="catImage" src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" width="280" height="232" alt="кот борис до.">
-              </picture>
-            </div>
-            <div class="living-example__slider">
-              <button class="living-example__slider-text living-example__slider-text--before">Было</button>
-              <div class="living-example__slider-container living-example__slider-container--before">
-                <button class="living-example__slider-button" type="button"></button>
-              </div>
-              <div class="living-example__slider-line">
-                <button class="living-example__slider-control"><span class="visually-hidden">Слайдер переключения котов.</span></button>
-              </div>
-              <input class="visually-hidden living-example__input" type="range" name="living-example__slider" id="living-example__slider" min="0" max="2" value="1">
-              <button class="living-example__slider-text living-example__slider-text--after">Стало</button>
-            </div>
-          </div>
       </section>
 
       <section class="partnership partnership-main">

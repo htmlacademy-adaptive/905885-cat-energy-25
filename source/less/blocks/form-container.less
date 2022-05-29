@@ -3,19 +3,21 @@
 }
 
 .form-container__title {
-  margin: 28px 20px 37px;
-  min-width: 280px;
+  margin: 28px auto 37px;
+  max-width: 280px;
   .font-main(400, 36px, 36px);
   color: #000000;
   border-bottom: none;
 
   @media (min-width: @tablet-width) {
-    margin: 65px 65px 54px 69px;
+    margin: 65px auto 54px;
+    max-width: 631px;
     .font-main(400, 60px, 60px);
   }
 
   @media (min-width: @desktop-width) {
-    margin: 82px 109px 56px;
+    margin: 70px auto 56px;
+    max-width: 1220px;
     .font-main(400, 60px, 60px);
   }
 }

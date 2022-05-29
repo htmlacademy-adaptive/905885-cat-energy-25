@@ -13,15 +13,25 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 569px;
+    min-width: 569px;
     margin-bottom: 70px;
-    margin-left: 111px;
+    margin-left: auto;
     margin-right: 80px;
   }
 }
 
 .form-cat__list {
   .site-list();
+
+  @media (max-width: @mobile-width-only) {
+    margin: 0 auto;
+    max-width: 280px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    max-width: 630px;
+  }
 }
 
 .form-cat__item {
